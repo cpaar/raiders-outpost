@@ -1,3 +1,4 @@
+import schedule from "@/data/expedition-schedule.json";
 import { isExpeditionProjectSlug } from "@/lib/expeditions";
 
 const EXPEDITION_RESET_NOTICE_LEAD_TIME_MS = 2 * 24 * 60 * 60 * 1000;
@@ -21,10 +22,16 @@ export const getExpeditionResetNow = () => {
   return new Date();
 };
 
+// Resume only when a confirmed date is configured, never at an assumed Q1 boundary.
+export const areExpeditionsPaused = (now = getExpeditionResetNow()) =>
+  now >= new Date(schedule.pauseStartsAt) &&
+  (!schedule.resumeAt || now < new Date(schedule.resumeAt));
+
 export const getExpeditionResetWindow = (
   projects: ScheduledProject[],
   now = getExpeditionResetNow()
 ) => {
+  const paused = areExpeditionsPaused(now);
   const force =
     process.env.EXPEDITION_RESET_FORCE?.trim().toLowerCase() ?? "";
   const forceActive = force === "true" || force === "1" || force === "yes";
@@ -41,7 +48,8 @@ export const getExpeditionResetWindow = (
         Boolean(
           project.expeditionEnd &&
             !Number.isNaN(project.expeditionEnd.valueOf()) &&
-            (forceActive ||
+            ((paused && project.expeditionEnd.toISOString() === schedule.departureAt) ||
+              forceActive ||
               now.valueOf() <
                 project.expeditionEnd.valueOf() +
                   EXPEDITION_RESET_NOTICE_DURATION_MS)

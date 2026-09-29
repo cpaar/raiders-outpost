@@ -26,6 +26,7 @@ type ProjectContextValue = {
   toggleProjectActive: (slug: string) => void;
   isProjectActive: (slug: string) => boolean;
   activeExpeditionSlug: string | null;
+  expeditionsPaused: boolean;
   expeditionReset: {
     cycleId: string;
     noticeStartIso: string;
@@ -51,6 +52,7 @@ export function ProjectProvider({ children }: { children: React.ReactNode }) {
     setInactiveProjectSlugs,
     activeExpeditionSlug,
     expeditionReset,
+    expeditionsPaused,
     updateItemQuantity,
     refresh,
   } = useProjectProgress(locale, localeReady);
@@ -58,7 +60,7 @@ export function ProjectProvider({ children }: { children: React.ReactNode }) {
   const projectVisibilityHydrated = hydrated;
 
   const projectsWithExpeditionFilter = useMemo(() => {
-    if (!activeExpeditionSlug) {
+    if (expeditionsPaused || !activeExpeditionSlug) {
       return projects.filter(
         (project) => !isExpeditionProjectSlug(project.slug)
       );
@@ -67,7 +69,7 @@ export function ProjectProvider({ children }: { children: React.ReactNode }) {
       if (!isExpeditionProjectSlug(project.slug)) return true;
       return project.slug === activeExpeditionSlug;
     });
-  }, [activeExpeditionSlug, projects]);
+  }, [activeExpeditionSlug, expeditionsPaused, projects]);
   const inactiveProjectSlugSet = useMemo(
     () => new Set(inactiveProjectSlugs),
     [inactiveProjectSlugs]
@@ -137,6 +139,7 @@ export function ProjectProvider({ children }: { children: React.ReactNode }) {
       isProjectActive,
       activeExpeditionSlug,
       expeditionReset: expeditionReset ?? null,
+      expeditionsPaused,
       updateItemQuantity,
       refreshProjects: refresh,
     }),
@@ -152,6 +155,7 @@ export function ProjectProvider({ children }: { children: React.ReactNode }) {
       isProjectActive,
       activeExpeditionSlug,
       expeditionReset,
+      expeditionsPaused,
       updateItemQuantity,
       refresh,
     ]

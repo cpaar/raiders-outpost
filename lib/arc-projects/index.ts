@@ -271,7 +271,7 @@ const readArcProjects = (locale: AppLocale) =>
       projects: [...projects, await buildBlueprintFallback(locale)],
     };
     },
-    ["arc-projects-v3", locale],
+    ["arc-projects-v5", locale],
     { revalidate: 3600 }
   );
 

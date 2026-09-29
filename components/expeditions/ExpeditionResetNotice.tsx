@@ -14,7 +14,7 @@ export function ExpeditionResetNotice() {
   const labels = useLabels();
   const { locale } = useLocale();
   const { identity, ready, clearIdentity } = useLocalIdentity();
-  const { expeditionReset, activeExpeditionSlug, refreshProjects } =
+  const { expeditionReset, refreshProjects } =
     useProjectContext();
   const [openDialog, setOpenDialog] = useState(false);
   const { saving, errorKey, dismissNotice, resetProgress } = useExpeditionReset({
@@ -24,27 +24,8 @@ export function ExpeditionResetNotice() {
     onUpdated: refreshProjects,
   });
 
-  const noticeStart = expeditionReset?.noticeStartIso
-    ? new Date(expeditionReset.noticeStartIso)
-    : null;
-  const noticeEnd = expeditionReset?.noticeEndIso
-    ? new Date(expeditionReset.noticeEndIso)
-    : null;
-  const now = new Date();
-  const inClientWindow = Boolean(
-    noticeStart &&
-      noticeEnd &&
-      now >= noticeStart &&
-      now < noticeEnd
-  );
   const shouldShowNotice = Boolean(
-    ready &&
-      identity &&
-      expeditionReset &&
-      activeExpeditionSlug &&
-      !expeditionReset.dismissed &&
-      !expeditionReset.completed &&
-      (expeditionReset.noticeActive || inClientWindow)
+    ready && identity && expeditionReset?.showNotice
   );
 
   if (!shouldShowNotice) return null;

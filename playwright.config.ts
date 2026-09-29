@@ -11,7 +11,8 @@ export default defineConfig({
     headless: true,
   },
   webServer: {
-    command: "EXPEDITION_RESET_NOW=2026-03-02T12:00:00.000Z npm run dev",
+    command: "npm run dev",
+    env: { EXPEDITION_RESET_NOW: process.env.EXPEDITION_RESET_NOW ?? "2026-03-02T12:00:00.000Z" },
     url: "http://127.0.0.1:4000",
     reuseExistingServer: false,
     timeout: 120_000,

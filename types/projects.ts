@@ -38,6 +38,7 @@ export type ProjectProgressPayload = {
   expeditionMemberCountsBySlug: Record<string, number>;
   communityCountsByItemId: Record<string, number>;
   activeExpeditionSlug: string | null;
+  expeditionsPaused: boolean;
   expeditionReset: {
     cycleId: string;
     noticeStartIso: string;

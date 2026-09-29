@@ -15,12 +15,10 @@
   },
   {
     "id": "expedition_project_s3",
-    "disabled": false,
     "name": {
       "de": "Expedition 3",
       "en": "Expedition 3"
-    },
-    "phases": []
+    }
   },
   {
     "id": "expedition_project_s4",
@@ -35,6 +33,126 @@
     "name": {
       "de": "Expedition 5",
       "en": "Expedition 5"
-    }
+    },
+    "endDate": 1790668800,
+    "expeditionEndDate": 1790668800
+  },
+  {
+    "id": "phantom_targets_project",
+    "disabled": true
+  },
+  {
+    "id": "phantom_targets_part_2_project",
+    "disabled": true
+  },
+  {
+    "id": "ascending_the_mountain_project",
+    "disabled": false,
+    "name": {
+      "en": "Ascending the Mountain",
+      "de": "Ascending the Mountain"
+    },
+    "phases": [
+      {
+        "phase": 1,
+        "name": {
+          "en": "Research High-Altitude Mechanics",
+          "de": "Höhenmechanik erforschen"
+        },
+        "requirementItemIds": [
+          {
+            "itemId": "mechanical_components",
+            "quantity": 10
+          },
+          {
+            "itemId": "pop_trigger",
+            "quantity": 6
+          },
+          {
+            "itemId": "explosive_compound",
+            "quantity": 10
+          },
+          {
+            "itemId": "headphones",
+            "quantity": 2
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "name": {
+          "en": "Begin Ignition Tests",
+          "de": "Zündungstests beginnen"
+        },
+        "requirementItemIds": [
+          {
+            "itemId": "wires",
+            "quantity": 20
+          },
+          {
+            "itemId": "voltage_converter",
+            "quantity": 8
+          },
+          {
+            "itemId": "sentinel_firing_core",
+            "quantity": 2
+          },
+          {
+            "itemId": "rocket_thruster",
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "name": {
+          "en": "Implement Landing Capabilities",
+          "de": "Landefähigkeit herstellen"
+        },
+        "requirementItemIds": [
+          {
+            "itemId": "ruined_parachute",
+            "quantity": 2
+          },
+          {
+            "itemId": "crash_mat",
+            "quantity": 10
+          },
+          {
+            "itemId": "shredder_gyro",
+            "quantity": 5
+          },
+          {
+            "itemId": "breathtaking_snow_globe",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "name": {
+          "en": "Final Tweaks",
+          "de": "Letzte Anpassungen"
+        },
+        "requirementItemIds": [
+          {
+            "itemId": "sensors",
+            "quantity": 30
+          },
+          {
+            "itemId": "broken_guidance_system",
+            "quantity": 3
+          },
+          {
+            "itemId": "advanced_electrical_components",
+            "quantity": 15
+          },
+          {
+            "itemId": "vaporizer_regulator",
+            "quantity": 3
+          }
+        ]
+      }
+    ]
   }
 ]

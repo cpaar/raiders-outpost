@@ -93,30 +93,28 @@ test("project toggles persist per user", async ({ page }) => {
   await expect(page.getByTestId(`project-card-link-${slug}`)).toHaveCount(0);
 });
 
-test("Phantom Targets is available with its new item images", async ({ page }) => {
-  await login(page, "PhantomTargetPilot");
+test("current project is available with four stages and expired projects are hidden", async ({ page }) => {
+  await login(page, "MountainPilot");
   await page.goto("/projects");
+  for (const slug of ["phantom_targets_project", "phantom_targets_part_2_project"]) {
+    await expect(page.getByTestId(`project-card-${slug}`)).toHaveCount(0);
+  }
 
-  const slug = "phantom_targets_part_2_project";
+  const slug = "ascending_the_mountain_project";
   await expect(page.getByTestId(`project-card-${slug}`)).toBeVisible();
   await page.getByTestId(`project-card-link-${slug}`).click();
   await expect(page).toHaveURL(new RegExp(`/projects/${slug}`));
+  const stages = page.getByTestId("project-stage-columns");
+  await expect(stages.locator("[data-stage-key]")).toHaveCount(4);
+  await expect(stages.locator('[data-item-id="mechanical_components"]')).toHaveAttribute("data-required", "10");
+  await expect(stages.locator('[data-item-id="vaporizer_regulator"]')).toHaveAttribute("data-required", "3");
 
-  const newItemIds = [
-    "glitched_arc_power_converter",
-    "glitched_arc_transmitter",
-    "glitched_arc_phased_array",
-    "glitched_arc_light_ring",
-    "glitched_arc_circuitry",
-  ];
-
-  for (const itemId of newItemIds) {
-    const image = page.locator(`[data-item-id="${itemId}"] img`);
+  for (const itemId of ["mechanical_components", "rocket_thruster", "crash_mat", "vaporizer_regulator"]) {
+    const image = stages.locator(`[data-item-id="${itemId}"] img`);
     await expect(image).toBeVisible();
-    await expect
-      .poll(() => image.evaluate((element: HTMLImageElement) => element.naturalWidth))
-      .toBeGreaterThan(0);
+    await expect.poll(() => image.evaluate((element: HTMLImageElement) => element.naturalWidth)).toBeGreaterThan(0);
   }
+  await page.getByRole("main").screenshot({ path: "test-results/ascending-the-mountain.png" });
 });
 
 test("mobile project layout uses vertical stage rail", async ({ browser }) => {

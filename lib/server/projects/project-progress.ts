@@ -11,6 +11,7 @@ import {
 import { isUserToggleProject } from "@/lib/project-categories";
 import { applyAdminProjectFilters, getAdminSettings } from "@/lib/server/admin-settings";
 import {
+  areExpeditionsPaused,
   getExpeditionResetWindow,
 } from "@/lib/expedition-reset";
 import { ensureProjects, normalizeSlugList } from "@/lib/server/projects/sync";
@@ -250,6 +251,7 @@ export const getProjectProgress = async (
     expeditionMemberCountsBySlug,
     communityCountsByItemId,
     activeExpeditionSlug,
+    expeditionsPaused: areExpeditionsPaused(),
     expeditionReset: expeditionReset && {
       ...expeditionReset,
       dismissed:

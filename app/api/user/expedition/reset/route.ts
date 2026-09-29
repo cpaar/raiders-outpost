@@ -38,6 +38,7 @@ export const POST = async (request: Request) => {
       activeExpeditionSlug: true,
       completedExpeditionSlugs: true,
       inactiveProjectSlugs: true,
+      expeditionResetCompletedCycle: true,
     },
   });
 
@@ -78,6 +79,13 @@ export const POST = async (request: Request) => {
     });
   }
 
+  if (!user.activeExpeditionSlug) {
+    return Response.json({ error: "No expedition to complete" }, { status: 409 });
+  }
+  if (expeditionReset && user.expeditionResetCompletedCycle === expeditionReset.cycleId) {
+    return Response.json({ error: "Departure already recorded" }, { status: 409 });
+  }
+
   await ensureProjects(projectsPayload);
 
   const filteredPayload = applyAdminProjectFilters(projectsPayload, settings);
@@ -90,6 +98,10 @@ export const POST = async (request: Request) => {
   const expeditionSlugs = filteredPayload.projects
     .filter((project) => isExpeditionProjectSlug(project.slug))
     .map((project) => project.slug);
+
+  if (!expeditionSlugs.includes(user.activeExpeditionSlug)) {
+    return Response.json({ error: "Expedition unavailable" }, { status: 409 });
+  }
 
   const completedSet = new Set(
     sanitizeCompletedExpeditionSlugs(
@@ -127,7 +139,34 @@ export const POST = async (request: Request) => {
     select: { id: true },
   });
 
-  await prisma.$transaction(async (tx) => {
+  const resetApplied = await prisma.$transaction(async (tx) => {
+    // Claim this departure before clearing progress. Concurrent retries must not
+    // advance another expedition or erase newly collected items.
+    const claimed = await tx.user.updateMany({
+      where: {
+        id: user.id,
+        activeExpeditionSlug: user.activeExpeditionSlug,
+        ...(expeditionReset ? {
+          OR: [
+            { expeditionResetCompletedCycle: null },
+            { expeditionResetCompletedCycle: { not: expeditionReset.cycleId } },
+          ],
+        } : {}),
+      },
+      data: {
+        activeExpeditionSlug: nextExpeditionSlug,
+        completedExpeditionSlugs: nextCompletedExpeditionSlugs,
+        inactiveProjectSlugs: Array.from(nextInactiveProjectSlugs).sort((a, b) =>
+          a.localeCompare(b)
+        ),
+        ...(expeditionReset ? {
+          expeditionResetCompletedCycle: expeditionReset.cycleId,
+          expeditionResetDismissedCycle: expeditionReset.cycleId,
+        } : {}),
+      },
+    });
+    if (!claimed.count) return false;
+
     const projectItemIds = projectItems.map((item) => item.id);
     if (projectItemIds.length) {
       await tx.userProjectItem.deleteMany({
@@ -140,23 +179,12 @@ export const POST = async (request: Request) => {
       });
     }
 
-    await tx.user.update({
-      where: { id: user.id },
-      data: {
-        activeExpeditionSlug: nextExpeditionSlug,
-        completedExpeditionSlugs: nextCompletedExpeditionSlugs,
-        inactiveProjectSlugs: Array.from(nextInactiveProjectSlugs).sort((a, b) =>
-          a.localeCompare(b)
-        ),
-        ...(expeditionReset
-          ? {
-              expeditionResetCompletedCycle: expeditionReset.cycleId,
-              expeditionResetDismissedCycle: expeditionReset.cycleId,
-            }
-          : {}),
-      },
-    });
+    return true;
   });
+
+  if (!resetApplied) {
+    return Response.json({ error: "Departure already recorded or expedition changed" }, { status: 409 });
+  }
 
   return Response.json({
     activeExpeditionSlug: nextExpeditionSlug,

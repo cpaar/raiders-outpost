@@ -224,6 +224,7 @@ export const useProjectProgress = (
     inactiveProjectSlugs: payload?.inactiveProjectSlugs ?? [],
     activeExpeditionSlug: payload?.activeExpeditionSlug ?? null,
     expeditionReset: payload?.expeditionReset ?? null,
+    expeditionsPaused: payload?.expeditionsPaused ?? false,
     updateItemQuantity,
     setInactiveProjectSlugs,
     refresh,

@@ -1,5 +1,6 @@
 "use client";
 
+import { useProjectContext } from "@/components/projects/ProjectContext";
 import { Button } from "@/components/ui/Button";
 import { useLabels } from "@/components/locale/useLabels";
 
@@ -17,6 +18,7 @@ export function ExpeditionResetDialog({
   error,
 }: ExpeditionResetDialogProps) {
   const labels = useLabels();
+  const { expeditionsPaused } = useProjectContext();
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 py-8">
@@ -52,7 +54,7 @@ export function ExpeditionResetDialog({
                 {labels.expeditionResetExplainLine1}
               </div>
               <div className="mt-2 text-[11px] uppercase tracking-[0.12em] text-muted">
-                {labels.expeditionResetExplainLine2}
+                {expeditionsPaused ? labels.expeditionPauseBody : labels.expeditionResetExplainLine2}
               </div>
               <div className="mt-3 text-[11px] uppercase tracking-[0.12em] text-muted">
                 {labels.expeditionResetExplainLine3}

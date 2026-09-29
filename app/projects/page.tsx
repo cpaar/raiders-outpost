@@ -5,6 +5,7 @@ import { useLabels } from "@/components/locale/useLabels";
 import { filterProjectsByCategory } from "@/lib/project-categories";
 import { ProjectSelectionPanel } from "@/components/projects/ProjectSelectionPanel";
 import { getProjectCards } from "@/components/projects/projectCards";
+import { ExpeditionPauseNotice } from "@/components/expeditions/ExpeditionPauseNotice";
 import { useMemo } from "react";
 
 export default function ProjectsPage() {
@@ -15,10 +16,11 @@ export default function ProjectsPage() {
     isProjectActive,
     projectVisibilityHydrated,
     activeExpeditionSlug,
+    expeditionsPaused,
   } = useProjectContext();
   const labels = useLabels();
   const projects = filterProjectsByCategory(allProjects, "projects", {
-    availableExpeditionSlug: activeExpeditionSlug,
+    availableExpeditionSlug: expeditionsPaused ? null : activeExpeditionSlug,
   });
   const sortedProjects = projects.slice().sort((a, b) =>
     a.name.localeCompare(b.name)
@@ -50,6 +52,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="flex flex-col gap-4">
+      <ExpeditionPauseNotice />
       <ProjectSelectionPanel
         title={labels.navProjects}
         projects={sortedProjects}

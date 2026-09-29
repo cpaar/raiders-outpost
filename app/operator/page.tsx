@@ -1,5 +1,6 @@
 "use client";
 
+import { ExpeditionPauseNotice } from "@/components/expeditions/ExpeditionPauseNotice";
 import { useMemo, useState } from "react";
 import { useLocalIdentity } from "@/components/auth/useLocalIdentity";
 import { useProjectContext } from "@/components/projects/ProjectContext";
@@ -23,8 +24,14 @@ import { usePublicProfileLink } from "@/hooks/usePublicProfileLink";
 
 export default function RaiderPage() {
   const { identity, ready, clearIdentity } = useLocalIdentity();
-  const { allProjects, loading: projectsLoading, refreshProjects } =
-    useProjectContext();
+  const {
+    allProjects,
+    loading: projectsLoading,
+    refreshProjects,
+    expeditionsPaused,
+    expeditionReset,
+  } = useProjectContext();
+  const resetAlreadyRecorded = Boolean(expeditionReset?.completed);
   const { locale } = useLocale();
   const labels = useLabels();
   const [copied, setCopied] = useState(false);
@@ -198,7 +205,7 @@ export default function RaiderPage() {
               className="mt-2 flex flex-wrap items-center justify-between gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted"
               data-testid="expedition-config"
             >
-              <span>{labels.activeExpeditionLabel}: {activeExpeditionLabel}</span>
+              <span>{expeditionsPaused ? labels.expeditionPauseTitle : `${labels.activeExpeditionLabel}: ${activeExpeditionLabel}`}</span>
             </div>
             <div className="mt-3 space-y-2">
               {projectsLoading && !expeditionProjects.length ? (
@@ -265,16 +272,18 @@ export default function RaiderPage() {
             ) : null}
           </div>
           <div className="border-t border-frame2 pt-4">
+            <ExpeditionPauseNotice />
             <div className="hud-label">{labels.expeditionResetLabel}</div>
             <div className="mt-2 flex flex-wrap items-center gap-2">
               <Button
                 type="button"
                 variant="default"
                 className="px-3"
+                disabled={projectsLoading || loadingExpedition || !activeExpeditionSlug || resetAlreadyRecorded}
                 data-testid="operator-expedition-reset-open"
                 onClick={() => setResetDialogOpen(true)}
               >
-                {labels.expeditionResetCta}
+                {resetAlreadyRecorded ? labels.expeditionResetRecorded : labels.expeditionResetCta}
               </Button>
             </div>
           </div>
