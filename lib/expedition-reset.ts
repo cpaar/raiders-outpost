@@ -27,6 +27,13 @@ export const areExpeditionsPaused = (now = getExpeditionResetNow()) =>
   now >= new Date(schedule.pauseStartsAt) &&
   (!schedule.resumeAt || now < new Date(schedule.resumeAt));
 
+export const filterPausedExpeditionProjects = <T extends { slug: string }>(
+  projects: T[],
+  now = getExpeditionResetNow()
+) => areExpeditionsPaused(now)
+  ? projects.filter((project) => !isExpeditionProjectSlug(project.slug))
+  : projects;
+
 export const getExpeditionResetWindow = (
   projects: ScheduledProject[],
   now = getExpeditionResetNow()

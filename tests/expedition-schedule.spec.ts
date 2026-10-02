@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { areExpeditionsPaused, getExpeditionResetWindow } from "../lib/expedition-reset";
+import { areExpeditionsPaused, filterPausedExpeditionProjects, getExpeditionResetWindow } from "../lib/expedition-reset";
 import overrides from "../data/arc-overrides/projects.json";
 import schedule from "../data/expedition-schedule.json";
 
@@ -11,6 +11,15 @@ const projects = overrides.map(project => ({
     ? new Date(project.expeditionEndDate * 1000).toISOString()
     : null,
 }));
+
+test("paused expedition needs leave regular projects and saved expedition data intact", () => {
+  const expedition = { slug: "expedition_project_s5", quantityOwned: 2 };
+  const regular = { slug: "regular_project", quantityOwned: 1 };
+  const saved = [expedition, regular];
+  expect(filterPausedExpeditionProjects(saved, new Date("2026-10-03T12:00:00Z"))).toEqual([regular]);
+  expect(saved).toEqual([expedition, regular]);
+  expect(filterPausedExpeditionProjects(saved, new Date("2026-09-29T07:59:59Z"))).toEqual(saved);
+});
 
 test("departure reminder uses the September window and stops after fourteen days", () => {
   const before = getExpeditionResetWindow(projects, new Date("2026-09-27T07:59:59Z"));

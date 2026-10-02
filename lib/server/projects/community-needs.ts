@@ -4,6 +4,7 @@ import { getArcItemLookupKeys, loadArcItems } from "@/lib/arc-items";
 import { getCommunitiesForUser } from "@/lib/server/community";
 import type { AppLocale } from "@/lib/locale";
 import { isExpeditionProjectSlug } from "@/lib/expeditions";
+import { filterPausedExpeditionProjects } from "@/lib/expedition-reset";
 import { applyAdminProjectFilters, getAdminSettings } from "@/lib/server/admin-settings";
 import { ensureProjects } from "@/lib/server/projects/sync";
 import type { CommunityNeedsItem } from "@/lib/server/projects/types";
@@ -72,7 +73,7 @@ export const getCommunityNeeds = async (
     projectItemIdByStage.set(project.slug, stageMap);
   }
 
-  const projectItems = communityPayload.projects.flatMap((project) => {
+  const projectItems = filterPausedExpeditionProjects(communityPayload.projects).flatMap((project) => {
     const stageMap = projectItemIdByStage.get(project.slug) ?? new Map();
     const isExpedition = expeditionSlugs.has(project.slug);
     return project.stages.flatMap((stage) =>

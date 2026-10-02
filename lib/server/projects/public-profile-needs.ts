@@ -3,6 +3,7 @@ import { loadArcProjects } from "@/lib/arc-projects";
 import { getArcItemLookupKeys, loadArcItems } from "@/lib/arc-items";
 import type { AppLocale } from "@/lib/locale";
 import { isExpeditionProjectSlug } from "@/lib/expeditions";
+import { filterPausedExpeditionProjects } from "@/lib/expedition-reset";
 import { applyAdminProjectFilters, getAdminSettings } from "@/lib/server/admin-settings";
 import { ensureProjects } from "@/lib/server/projects/sync";
 import type {
@@ -69,7 +70,7 @@ export const getPublicProfileNeeds = async (
     projectItemIdByStage.set(project.slug, stageMap);
   }
 
-  const projectItems = filteredPayload.projects.flatMap((project) => {
+  const projectItems = filterPausedExpeditionProjects(filteredPayload.projects).flatMap((project) => {
     const stageMap = projectItemIdByStage.get(project.slug) ?? new Map();
     const isExpedition = expeditionSlugs.has(project.slug);
     return project.stages.flatMap((stage) =>
