@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ProgressRing } from "@/components/ui/ProgressRing";
 import type { ProjectCardData } from "@/components/projects/projectCards";
 import { cn } from "@/lib/cn";
+import { HideoutMissingMaterials } from "@/components/projects/HideoutMissingMaterials";
 
 export function ProjectCard({
   project,
@@ -17,7 +18,8 @@ export function ProjectCard({
     <div
       data-testid={`project-card-${project.slug}`}
       className={cn(
-        "arc-panel arc-corners group relative flex flex-col justify-center overflow-hidden px-4 py-4 transition",
+        "arc-panel arc-corners group relative flex flex-col overflow-hidden px-4 py-4 transition",
+        project.kind !== "workshop" && "justify-center",
         href ? "hover:border-accent/60" : "",
         isCompleted
           ? "border-frame2/50 opacity-70 hover:border-frame2/60"
@@ -96,6 +98,9 @@ export function ProjectCard({
           />
         </div>
       </div>
+      {project.kind === "workshop" ? (
+        <HideoutMissingMaterials project={project} />
+      ) : null}
     </div>
   );
 }
