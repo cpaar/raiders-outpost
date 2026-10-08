@@ -1,0 +1,11 @@
+{
+  "id": "tether_launcher_blueprint",
+  "type": "Blueprint",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Bauplan: Leinenwerfer",
+    "en": "Tether Launcher Blueprint"
+  },
+  "imageFilename": "tether_launcher_blueprint.png"
+}

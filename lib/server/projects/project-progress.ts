@@ -235,7 +235,7 @@ export const getProjectProgress = async (
               quantityOwned: ownedByItemId.get(projectItemId) ?? 0,
               imageFile: meta.imageFile ?? null,
               rarity: meta.rarity,
-              itemType: meta.itemType,
+              itemType: item.kind === "objective" ? "Objective" : meta.itemType,
             };
           }),
         };

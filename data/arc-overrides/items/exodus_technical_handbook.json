@@ -1,0 +1,11 @@
+{
+  "id": "exodus_technical_handbook",
+  "type": "Misc",
+  "rarity": "Rare",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Technisches Exodus-Handbuch",
+    "en": "Exodus Technical Handbook"
+  },
+  "imageFilename": "exodus_technical_handbook.png"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "emperor_gateway_conduit_blueprint",
+  "type": "Blueprint",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Bauplan: Kaiser-Portalleiter",
+    "en": "Emperor Gateway Conduit Blueprint"
+  },
+  "imageFilename": "emperor_gateway_conduit_blueprint.png"
+}

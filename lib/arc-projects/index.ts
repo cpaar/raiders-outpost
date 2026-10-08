@@ -18,6 +18,7 @@ export type ArcProjectItem = {
   itemId: string;
   displayName: string;
   quantityRequired: number;
+  kind?: "objective";
 };
 
 export type ArcProjectStage = {
@@ -25,6 +26,7 @@ export type ArcProjectStage = {
   name: string;
   sortOrder: number;
   items: ArcProjectItem[];
+  prerequisite?: string;
 };
 
 export type ArcProject = {
@@ -65,6 +67,7 @@ type ArcProjectSource = {
     name?: Record<string, string>;
     phase?: number;
     requirementItemIds?: { itemId: string; quantity: number }[];
+    objectives?: { id: string; name: Record<string, string> }[];
   }[];
 };
 
@@ -75,6 +78,7 @@ type ArcHideoutSource = {
   levels?: {
     level?: number;
     requirementItemIds?: { itemId: string; quantity: number }[];
+    requires?: { outpostRooms?: number }[];
   }[];
 };
 
@@ -151,6 +155,13 @@ const mapHideoutProject = (
         stageKey: `level-${sortOrder || 0}`,
         name: resolveHideoutStageName(locale, sortOrder || 0),
         sortOrder,
+        prerequisite: level.requires?.map((requirement) =>
+          requirement.outpostRooms
+            ? locale === "de"
+              ? `Benötigt ${requirement.outpostRooms} ${requirement.outpostRooms === 1 ? "Außenposten-Raum" : "Außenposten-Räume"}.`
+              : `Requires ${requirement.outpostRooms} Outpost ${requirement.outpostRooms === 1 ? "room" : "rooms"}.`
+            : ""
+        ).filter(Boolean).join(" ") || undefined,
         items:
           level.requirementItemIds?.map((item) => ({
             itemId: item.itemId,
@@ -191,13 +202,21 @@ const mapProject = (
             `Phase ${String(sortOrder).padStart(2, "0")}`
           ),
         sortOrder,
-        items:
-          phase.requirementItemIds?.map((item) => ({
+        items: [
+          ...(phase.requirementItemIds?.map((item) => ({
             itemId: item.itemId,
             displayName:
               itemNameMap.get(item.itemId) ?? item.itemId ?? "Unknown",
             quantityRequired: Number(item.quantity ?? 0),
-          })) ?? [],
+          })) ?? []),
+          // Stable objective IDs reuse the existing per-user progress persistence.
+          ...(phase.objectives?.map((objective) => ({
+            itemId: `objective:${project.id}:${objective.id}`,
+            displayName: resolveName(objective.name, locale, objective.id),
+            quantityRequired: 1,
+            kind: "objective" as const,
+          })) ?? []),
+        ],
       };
     }) ?? [];
 
@@ -271,7 +290,7 @@ const readArcProjects = (locale: AppLocale) =>
       projects: [...projects, await buildBlueprintFallback(locale)],
     };
     },
-    ["arc-projects-v5", locale],
+    ["arc-projects-v7", locale],
     { revalidate: 3600 }
   );
 

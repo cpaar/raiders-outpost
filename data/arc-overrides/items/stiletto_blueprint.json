@@ -1,0 +1,11 @@
+{
+  "id": "stiletto_blueprint",
+  "type": "Blueprint",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Bauplan: Stiletto",
+    "en": "Stiletto Blueprint"
+  },
+  "imageFilename": "stiletto_blueprint.png"
+}

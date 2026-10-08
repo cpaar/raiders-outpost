@@ -1,0 +1,98 @@
+{
+  "id": "research_station",
+  "name": {
+    "de": "Forschungsstation",
+    "en": "Research Station"
+  },
+  "maxLevel": 4,
+  "levels": [
+    {
+      "level": 1,
+      "requirementItemIds": [
+        {
+          "itemId": "planks",
+          "quantity": 35
+        },
+        {
+          "itemId": "battered_paperback",
+          "quantity": 5
+        },
+        {
+          "itemId": "mini_pump",
+          "quantity": 3
+        }
+      ],
+      "requires": [
+        {
+          "outpostRooms": 1
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "requirementItemIds": [
+        {
+          "itemId": "calculator",
+          "quantity": 3
+        },
+        {
+          "itemId": "raider_logbook",
+          "quantity": 3
+        },
+        {
+          "itemId": "skulker_targeter",
+          "quantity": 5
+        }
+      ],
+      "requires": [
+        {
+          "outpostRooms": 2
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "requirementItemIds": [
+        {
+          "itemId": "differential_microphone",
+          "quantity": 3
+        },
+        {
+          "itemId": "exodus_technical_handbook",
+          "quantity": 3
+        },
+        {
+          "itemId": "bully_fragmenter",
+          "quantity": 6
+        }
+      ],
+      "requires": [
+        {
+          "outpostRooms": 3
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "requirementItemIds": [
+        {
+          "itemId": "thermal_shaker",
+          "quantity": 3
+        },
+        {
+          "itemId": "arc_data_module",
+          "quantity": 3
+        },
+        {
+          "itemId": "frigate_inductor",
+          "quantity": 1
+        }
+      ],
+      "requires": [
+        {
+          "outpostRooms": 4
+        }
+      ]
+    }
+  ]
+}

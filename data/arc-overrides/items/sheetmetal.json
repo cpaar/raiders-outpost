@@ -1,0 +1,10 @@
+{
+  "id": "sheetmetal",
+  "type": "Basic Material",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "en": "SheetMetal"
+  },
+  "imageFilename": "sheetmetal.png"
+}

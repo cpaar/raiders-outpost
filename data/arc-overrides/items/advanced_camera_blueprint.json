@@ -1,0 +1,11 @@
+{
+  "id": "advanced_camera_blueprint",
+  "type": "Blueprint",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Bauplan: Fortschrittliche Kamera",
+    "en": "Advanced Camera Blueprint"
+  },
+  "imageFilename": "advanced_camera_blueprint.png"
+}

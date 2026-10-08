@@ -1,0 +1,11 @@
+{
+  "id": "arc_data_module",
+  "type": "Misc",
+  "rarity": "Epic",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "ARC-Datenmodul",
+    "en": "ARC Data Module"
+  },
+  "imageFilename": "arc_data_module.png"
+}

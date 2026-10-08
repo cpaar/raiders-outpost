@@ -1,0 +1,11 @@
+{
+  "id": "bully_fragmenter",
+  "type": "Recyclable",
+  "rarity": "Epic",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Bully-Zerkleinerer",
+    "en": "Bully Fragmenter"
+  },
+  "imageFilename": "bully_fragmenter.png"
+}

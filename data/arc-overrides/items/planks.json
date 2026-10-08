@@ -1,0 +1,11 @@
+{
+  "id": "planks",
+  "type": "Basic Material",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Bretter",
+    "en": "Planks"
+  },
+  "imageFilename": "planks.png"
+}

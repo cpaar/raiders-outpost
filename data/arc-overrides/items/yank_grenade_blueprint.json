@@ -1,0 +1,11 @@
+{
+  "id": "yank_grenade_blueprint",
+  "type": "Blueprint",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Bauplan: Zuggranate",
+    "en": "Yank Grenade Blueprint"
+  },
+  "imageFilename": "yank_grenade_blueprint.png"
+}

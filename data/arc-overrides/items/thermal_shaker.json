@@ -1,0 +1,11 @@
+{
+  "id": "thermal_shaker",
+  "type": "Recyclable",
+  "rarity": "Epic",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Thermoschüttler",
+    "en": "Thermal Shaker"
+  },
+  "imageFilename": "thermal_shaker.png"
+}

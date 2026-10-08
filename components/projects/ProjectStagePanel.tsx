@@ -7,6 +7,7 @@ import { useLabels } from "@/components/locale/useLabels";
 import { getProgressStats } from "@/lib/progress";
 import { ProgressRing } from "@/components/ui/ProgressRing";
 import { EmptyState } from "@/components/ui/EmptyState";
+import { ProjectObjective } from "@/components/projects/ProjectObjective";
 
 type ProjectStagePanelProps = {
   stage: ProjectStageProgress;
@@ -32,6 +33,8 @@ function ProjectStagePanelComponent({
   );
   const progressPercent = Math.round(progressRatio * 100);
   const isStackedLayout = layoutVariant === "stacked";
+  const materials = stage.items.filter((item) => item.itemType !== "Objective");
+  const objectives = stage.items.filter((item) => item.itemType === "Objective");
   const itemGridClassName = isStackedLayout
     ? "grid gap-1 [grid-template-columns:repeat(auto-fill,minmax(96px,1fr))] sm:[grid-template-columns:repeat(auto-fill,minmax(112px,1fr))] lg:[grid-template-columns:repeat(auto-fill,minmax(120px,1fr))]"
     : itemGridVariant === "twoRows"
@@ -93,9 +96,19 @@ function ProjectStagePanelComponent({
             data-testid={`project-stage-content-${stage.stageKey}`}
           >
             <div>
-              {stage.items.length ? (
+              {stage.prerequisite ? (
+                <p className="mb-3 border-l-2 border-accent/50 pl-2 text-xs text-muted" data-testid="stage-prerequisite">
+                  {stage.prerequisite}
+                </p>
+              ) : null}
+              {objectives.length ? (
+                <div className="mb-3 space-y-2">
+                  {objectives.map((item) => <ProjectObjective key={item.itemId} item={item} onAdjust={onAdjust} />)}
+                </div>
+              ) : null}
+              {materials.length ? (
                 <div className={itemGridClassName}>
-                  {stage.items.map((item) => (
+                  {materials.map((item) => (
                     <ProjectItemTile
                       key={item.itemId}
                       item={item}
@@ -104,11 +117,11 @@ function ProjectStagePanelComponent({
                     />
                   ))}
                 </div>
-              ) : (
+              ) : !objectives.length ? (
                 <EmptyState>
                   {labels.dataNotFoundScanning}
                 </EmptyState>
-              )}
+              ) : null}
             </div>
           </div>
         </div>

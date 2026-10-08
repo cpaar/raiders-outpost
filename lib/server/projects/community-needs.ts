@@ -78,6 +78,7 @@ export const getCommunityNeeds = async (
     const isExpedition = expeditionSlugs.has(project.slug);
     return project.stages.flatMap((stage) =>
       stage.items
+        .filter((item) => item.kind !== "objective")
         .map((item) => {
           const projectItemId = stageMap.get(
             `${stage.sortOrder}::${item.itemId}`

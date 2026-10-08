@@ -1,0 +1,11 @@
+{
+  "id": "banjo_blueprint",
+  "type": "Blueprint",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Bauplan: Banjo",
+    "en": "Banjo Blueprint"
+  },
+  "imageFilename": "banjo_blueprint.png"
+}

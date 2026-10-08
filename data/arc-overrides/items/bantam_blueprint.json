@@ -1,0 +1,11 @@
+{
+  "id": "bantam_blueprint",
+  "type": "Blueprint",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Bauplan: Bantam",
+    "en": "Bantam Blueprint"
+  },
+  "imageFilename": "bantam_blueprint.png"
+}

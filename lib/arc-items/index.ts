@@ -176,7 +176,7 @@ const readArcItems = (locale: AppLocale) =>
         .sort((a, b) => a.name.localeCompare(b.name)),
     };
     },
-    ["arc-items-v2", locale],
+    ["arc-items-v3", locale],
     { revalidate: 3600 }
   );
 

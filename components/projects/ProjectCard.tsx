@@ -98,7 +98,7 @@ export function ProjectCard({
           />
         </div>
       </div>
-      {project.kind === "workshop" ? (
+      {project.kind === "workshop" || project.slug === "sheltered_retreat_project" ? (
         <HideoutMissingMaterials project={project} />
       ) : null}
     </div>

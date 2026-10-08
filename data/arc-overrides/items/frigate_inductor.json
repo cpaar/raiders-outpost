@@ -1,0 +1,11 @@
+{
+  "id": "frigate_inductor",
+  "type": "Topside Material",
+  "rarity": "Legendary",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Fregattenspule",
+    "en": "Frigate Inductor"
+  },
+  "imageFilename": "frigate_inductor.png"
+}

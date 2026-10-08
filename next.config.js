@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  turbopack: { root: __dirname },
   outputFileTracingIncludes: {
     "/api/arc-items": [
       "./node_modules/arcraiders-data/items/**",

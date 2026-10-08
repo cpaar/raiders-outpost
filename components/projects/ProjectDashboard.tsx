@@ -140,7 +140,7 @@ export function ProjectDashboard({
           </div>
           <div className="hidden overflow-x-auto p-2.5 lg:block" data-testid="project-stage-columns">
             <div
-              className="grid min-w-max gap-2"
+              className="grid min-w-full gap-2"
               style={{
                 gridTemplateColumns: `repeat(${Math.max(sortedStages.length, 1)}, minmax(220px, 1fr))`,
               }}

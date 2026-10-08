@@ -37,7 +37,8 @@ export const filterProjectsByCategory = <
   options?: ProjectCategoryOptions
 ) =>
   projects.filter(
-    (project) => getProjectDisplayCategory(project, options) === category
+    (project) => getProjectDisplayCategory(project, options) === category ||
+      (category === "hideout" && project.slug === "sheltered_retreat_project")
   );
 
 export const isUserToggleProject = (

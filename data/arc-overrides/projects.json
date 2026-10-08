@@ -154,5 +154,74 @@
         ]
       }
     ]
+  },
+  {
+    "id": "sheltered_retreat_project",
+    "disabled": false,
+    "name": {
+      "de": "Außenposten: Rückzugsort",
+      "en": "Outpost: Sheltered Retreat"
+    },
+    "phases": [
+      {
+        "phase": 1,
+        "name": {
+          "de": "Untersuche die Lebensbedingungen an der Oberfläche",
+          "en": "Research topside living conditions"
+        },
+        "requirementItemIds": [],
+        "objectives": [
+          {
+            "id": "QuestComplete_Photo",
+            "name": {
+              "de": "Fotografiere ein Farmhaus mit einer Kamera.",
+              "en": "Take a photo of a farmland house with a camera."
+            }
+          }
+        ]
+      },
+      {
+        "phase": 2,
+        "name": {
+          "de": "Sammle Baumaterial.",
+          "en": "Gather building materials"
+        },
+        "requirementItemIds": [
+          {
+            "itemId": "planks",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 5
+          },
+          {
+            "itemId": "arc_alloy",
+            "quantity": 10
+          },
+          {
+            "itemId": "advanced_electrical_components",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "phase": 3,
+        "name": {
+          "de": "Sichere die Baustelle.",
+          "en": "Safeguard the building site"
+        },
+        "requirementItemIds": [],
+        "objectives": [
+          {
+            "id": "QuestObjectives",
+            "name": {
+              "de": "Lenke die ARC-Maschinen ab und zerstöre sie, damit die Bauarbeiten ungestört erfolgen können.",
+              "en": "Distract and destroy ARC machines to allow for the construction efforts to take place undisturbed."
+            }
+          }
+        ]
+      }
+    ]
   }
 ]

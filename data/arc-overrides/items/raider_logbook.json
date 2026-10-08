@@ -1,0 +1,11 @@
+{
+  "id": "raider_logbook",
+  "type": "Misc",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Raider-Logbuch",
+    "en": "Raider Logbook"
+  },
+  "imageFilename": "raider_logbook.png"
+}

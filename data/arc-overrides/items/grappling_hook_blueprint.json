@@ -1,0 +1,11 @@
+{
+  "id": "grappling_hook_blueprint",
+  "type": "Blueprint",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Bauplan: Enterhaken",
+    "en": "Grappling Hook Blueprint"
+  },
+  "imageFilename": "grappling_hook_blueprint.png"
+}

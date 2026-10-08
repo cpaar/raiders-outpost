@@ -1,11 +1,14 @@
 import { useLabels } from "@/components/locale/useLabels";
 import { ItemTileMedia } from "@/components/items/ItemTileMedia";
-import { getMissingProjectItems } from "@/lib/progress";
+import { getMissingProjectItems, getProgressStats } from "@/lib/progress";
+import { useLocale } from "@/components/locale/LocaleProvider";
 import type { ProjectProgress } from "@/types/projects";
 
 export function HideoutMissingMaterials({ project }: { project: ProjectProgress }) {
   const labels = useLabels();
+  const { locale } = useLocale();
   const items = getMissingProjectItems(project.stages);
+  const complete = getProgressStats(project.stages.flatMap((stage) => stage.items)).isCompleted;
 
   return (
     <div className="mt-2" data-testid={`hideout-needs-${project.slug}`}>
@@ -32,7 +35,7 @@ export function HideoutMissingMaterials({ project }: { project: ProjectProgress 
           ))}
         </ul>
       ) : (
-        <span className="hud-label text-[10px]">{labels.completeLabel}</span>
+        <span className="hud-label text-[10px]">{complete ? labels.completeLabel : locale === "de" ? "Aufgaben offen" : "Objectives remaining"}</span>
       )}
     </div>
   );

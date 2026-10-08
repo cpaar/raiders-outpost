@@ -1,0 +1,11 @@
+{
+  "id": "battered_paperback",
+  "type": "Misc",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Zerschlissenes Taschenbuch",
+    "en": "Battered Paperback"
+  },
+  "imageFilename": "battered_paperback.png"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "mini_pump",
+  "type": "Recyclable",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Minipumpe",
+    "en": "Mini Pump"
+  },
+  "imageFilename": "mini_pump.png"
+}

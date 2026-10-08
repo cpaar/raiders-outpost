@@ -16,6 +16,7 @@ export type ProjectStageProgress = {
   name: string;
   sortOrder: number;
   items: ProjectItemProgress[];
+  prerequisite?: string;
 };
 
 export type ProjectProgress = {

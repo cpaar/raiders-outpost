@@ -1,0 +1,11 @@
+{
+  "id": "calculator",
+  "type": "Topside Material",
+  "rarity": "Rare",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Taschenrechner",
+    "en": "Calculator"
+  },
+  "imageFilename": "calculator.png"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "skulker_targeter",
+  "type": "Recyclable",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Skulker-Zielgerät",
+    "en": "Skulker Targeter"
+  },
+  "imageFilename": "skulker_targeter.png"
+}
