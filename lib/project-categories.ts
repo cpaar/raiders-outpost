@@ -11,7 +11,7 @@ export const getProjectDisplayCategory = (
   project: Pick<ProjectProgress, "kind" | "slug">,
   options?: ProjectCategoryOptions
 ): ProjectDisplayCategory | null => {
-  if (project.kind === "blueprints") {
+  if (project.kind === "blueprints" || project.kind === "collection") {
     return "blueprints";
   }
   if (project.kind === "workshop") {

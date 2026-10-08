@@ -1,0 +1,11 @@
+{
+  "id": "floor_lamp_design",
+  "type": "Design",
+  "rarity": "Epic",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Stehlampenentwurf",
+    "en": "Floor Lamp Design"
+  },
+  "imageFilename": "floor_lamp_design_metaforge.png"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "diner_cupboard_design",
+  "type": "Design",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Diner-Schrank-Entwurf",
+    "en": "Diner Cupboard Design"
+  },
+  "imageFilename": "diner_cupboard_design_metaforge.png"
+}

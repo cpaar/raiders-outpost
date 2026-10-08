@@ -1,0 +1,11 @@
+{
+  "id": "study_piano_design",
+  "type": "Design",
+  "rarity": "Legendary",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Entwurf: Arbeitszimmerklavier",
+    "en": "Study Piano Design"
+  },
+  "imageFilename": "study_piano_design_metaforge.png"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "ochre",
+  "type": "Stencil",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Ocker",
+    "en": "Ochre"
+  },
+  "imageFilename": "ochre_metaforge.png"
+}

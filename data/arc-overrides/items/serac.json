@@ -1,0 +1,11 @@
+{
+  "id": "serac",
+  "type": "Stencil",
+  "rarity": "Legendary",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Eisturm",
+    "en": "Serac"
+  },
+  "imageFilename": "serac.png"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "faculty_closet_design",
+  "type": "Design",
+  "rarity": "Rare",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Entwurf: Fakultätsschrank",
+    "en": "Faculty Closet Design"
+  },
+  "imageFilename": "faculty_closet_design_metaforge.png"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "fortuna",
+  "type": "Stencil",
+  "rarity": "Epic",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Fortuna",
+    "en": "Fortuna"
+  },
+  "imageFilename": "fortuna.png"
+}

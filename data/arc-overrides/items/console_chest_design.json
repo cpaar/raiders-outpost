@@ -1,0 +1,11 @@
+{
+  "id": "console_chest_design",
+  "type": "Design",
+  "rarity": "Rare",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Konsolentruhe-Entwurf",
+    "en": "Console Chest Design"
+  },
+  "imageFilename": "console_chest_design_metaforge.png"
+}

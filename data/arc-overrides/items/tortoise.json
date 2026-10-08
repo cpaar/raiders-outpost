@@ -1,0 +1,11 @@
+{
+  "id": "tortoise",
+  "type": "Stencil",
+  "rarity": "Epic",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Schildkröte",
+    "en": "Tortoise"
+  },
+  "imageFilename": "tortoise_metaforge.png"
+}

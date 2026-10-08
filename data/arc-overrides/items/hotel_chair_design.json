@@ -1,0 +1,11 @@
+{
+  "id": "hotel_chair_design",
+  "type": "Design",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Hotelstuhl-Entwurf",
+    "en": "Hotel Chair Design"
+  },
+  "imageFilename": "hotel_chair_design_metaforge.png"
+}

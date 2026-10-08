@@ -1,0 +1,11 @@
+{
+  "id": "chambers_lamp_design",
+  "type": "Design",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Kammerlampe-Entwurf",
+    "en": "Chambers Lamp Design"
+  },
+  "imageFilename": "chambers_lamp_design_metaforge.png"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "diner_stool_design",
+  "type": "Design",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Dinerhocker-Entwurf",
+    "en": "Diner Stool Design"
+  },
+  "imageFilename": "diner_stool_design_metaforge.png"
+}

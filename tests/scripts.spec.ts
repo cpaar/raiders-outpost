@@ -117,7 +117,7 @@ test("item script endpoint lists available rarities for invalid rarity", async (
 
   const text = await response.text();
   expect(text).toMatch(
-    /^Keine Items fuer rarity "definitely-not-real" gefunden\. Verfuegbare Rarities: .+$/
+    /^Item: Keine Items fuer rarity "definitely-not-real" gefunden\. Verfuegbare Rarities: .+$/
   );
 });
 
@@ -400,7 +400,7 @@ test("arc bot labels provide german translations", () => {
   expect(translateBotName("MATRIARCH", "de")).toBe("Matriarchin");
   expect(translateBotName("THE QUEEN", "de")).toBe("Königin");
   expect(translateBotName("SENTINEL", "de")).toBe("Wächter");
-  expect(translateBotName("ARC Assessor", "de")).toBe("ARC-Assessor");
+  expect(translateBotName("ARC Assessor", "de")).toBe("Prüfer");
   expect(translateBotName("Comet", "de")).toBe("Komet");
   expect(translateBotName("Turbine", "de")).toBe("Turbine");
 });

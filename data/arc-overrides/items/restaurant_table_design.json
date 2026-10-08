@@ -1,0 +1,11 @@
+{
+  "id": "restaurant_table_design",
+  "type": "Design",
+  "rarity": "Rare",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Restaurant-Tisch-Entwurf",
+    "en": "Restaurant Table Design"
+  },
+  "imageFilename": "restaurant_table_design_metaforge.png"
+}

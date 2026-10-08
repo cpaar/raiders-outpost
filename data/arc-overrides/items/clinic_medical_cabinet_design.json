@@ -1,0 +1,11 @@
+{
+  "id": "clinic_medical_cabinet_design",
+  "type": "Design",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Entwurf: Klinik-Medizinschrank",
+    "en": "Clinic Medical Cabinet Design"
+  },
+  "imageFilename": "clinic_medical_cabinet_design_metaforge.png"
+}

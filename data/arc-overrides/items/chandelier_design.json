@@ -1,0 +1,11 @@
+{
+  "id": "chandelier_design",
+  "type": "Design",
+  "rarity": "Legendary",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Kronleuchterentwurf",
+    "en": "Chandelier Design"
+  },
+  "imageFilename": "chandelier_design_metaforge.png"
+}

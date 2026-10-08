@@ -1,0 +1,11 @@
+{
+  "id": "security_chair_design",
+  "type": "Design",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Entwurf: Sicherheitsstuhl",
+    "en": "Security Chair Design"
+  },
+  "imageFilename": "security_chair_design_metaforge.png"
+}

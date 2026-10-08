@@ -1,0 +1,11 @@
+{
+  "id": "warehouse_desk_design",
+  "type": "Design",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Lagerhaus-Schreibtisch-Entwurf",
+    "en": "Warehouse Desk Design"
+  },
+  "imageFilename": "warehouse_desk_design_metaforge.png"
+}

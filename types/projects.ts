@@ -22,7 +22,7 @@ export type ProjectStageProgress = {
 export type ProjectProgress = {
   slug: string;
   name: string;
-  kind: "workshop" | "project" | "blueprints";
+  kind: "workshop" | "project" | "blueprints" | "collection";
   repeatable: boolean;
   timeLimitedUntil: string | null;
   startAt: string | null;

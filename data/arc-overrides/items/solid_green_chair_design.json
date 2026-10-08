@@ -1,0 +1,11 @@
+{
+  "id": "solid_green_chair_design",
+  "type": "Design",
+  "rarity": "Rare",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Einfarbiger grüner Stuhlentwurf",
+    "en": "Solid Green Chair Design"
+  },
+  "imageFilename": "solid_green_chair_design_metaforge.png"
+}

@@ -39,10 +39,77 @@ Known limits:
   progress. Separate expansion tracking awaits verified requirements.
 - The construction-site objective tracks completion of the game objective as a
   whole; the source does not provide its individual combat counters.
-- Furniture Designs, Stencils, and Research items are not automatically treated
-  as Blueprints. Their unlock systems remain outside this import.
+- Furniture Designs and Stencils are separate learned collections (see below).
+  Research items are not treated as Blueprints.
 
 Validation: `tests/frozen-trail.spec.ts` exercises blueprint/material/objective
 persistence, research prerequisites, image availability, mobile layout, and
 exclusion of objectives from shared and public needs. Screenshots are written
 under `test-results/`.
+
+## Learned collections
+
+The collection screen at `/blueprints` now has separate tabs for Blueprints,
+100 furniture Designs, and 14 weapon Stencils. The latter two are imported from
+the same October 8 item snapshot, with German/English names and local images.
+Only unlock status is tracked, with quantity 0/1; no crafting or research costs
+are imported. The user explicitly requested learning status only.
+
+The existing `blueprints` slug, stage order and item IDs remain stable. The new
+`furniture_designs` and `weapon_stencils` slugs reuse per-user progress persistence
+with `kind: collection`. They do not enter the normal project/hideout lists.
+Each tab has independent search and missing-only storage keys; the selected tab
+is remembered. Existing Blueprint filter keys are preserved.
+
+The new cosmetic collections are excluded from the existing expedition reset,
+which still resets workshop and Blueprint progress only. Premium/DLC rewards
+are included in the catalogue; being listed does not imply that every entry can
+be looted Topside.
+
+`tests/collections.spec.ts` covers separate categories, counts, learned status
+across reloads, preservation of existing Blueprint progress, independent filters,
+and screenshots on desktop/mobile.
+
+## Image research (October 8, 2026)
+
+MetaForge's public item API (`https://metaforge.app/api/arc-raiders/items`) returns
+100 Designs with 100 distinct image URLs when queried with `search=Design&limit=150`.
+Unlike ARC Tracker's generic Design documents, visually checked examples show
+the actual furniture: Alpine Wardrobe and Bar Table. MetaForge's Design IDs map
+to our IDs by replacing hyphens with underscores; match against our catalogue,
+rather than importing MetaForge names or rarity values wholesale.
+
+The query `search=Stencil&limit=150` returns 14 Stencils plus Stencil Parts.
+Eight Stencils have individual, visually verified pattern-book icons: Cerulean,
+Dusty Camo, Garnet, Milky Terraccota (source spelling), Ochre, Slipstream,
+Tortoise, and Verdigris. Bulwark, Dragon's Breath, Empyrean, Fortuna, Sacrifice,
+and Serac share a generic Blueprint image. These icons show pattern books,
+not the finish applied to a weapon. No complete, reliably labelled set of
+weapon previews was found. A Reddit showcase exists but does not provide a
+verified item-by-item asset mapping.
+
+Before adopting MetaForge images, retain the existing learned-item IDs and
+progress, add source attribution/link as required by their API terms, and cache
+assets locally. Public API documentation: https://metaforge.app/arc-raiders/api.
+Example pages:
+- https://metaforge.app/arc-raiders/database/item/alpine-wardrobe-design
+- https://metaforge.app/arc-raiders/database/item/bar-table-design
+
+The collection now uses all 100 MetaForge furniture previews and the eight
+individual Stencil icons, stored locally. The remaining six Stencils retain
+their original icons. Item IDs and learned progress remain unchanged.
+`data/arc-overrides/collection-image-sources.json` records the source URL and
+SHA-256 of each imported image. New `_metaforge.png` filenames avoid stale
+images from the image route's immutable browser cache. A MetaForge attribution
+link appears below the furniture and Stencil collections in both languages.
+Two ambiguous Study Armchair names are matched by source asset ID:
+`study-armchair-design-res-armchair-01-a` → `study_armchair_design` and
+`study-armchair-design-res-sofa-01-y150-a` → `res_sofa_01_y150_a_design`.
+
+Deployment review: the existing Docker image copies `data/` into the runtime;
+the image API's file tracing also includes the override images. No new
+environment variables, dependencies, or database migrations are required.
+Project/item records are added by the existing transactional synchronization.
+Full Playwright coverage was exercised, including the normally skipped final
+expedition departure test in a separate pause-date run. Two stale Script test
+expectations were aligned with existing behavior (`Item:` prefix and `Prüfer`).

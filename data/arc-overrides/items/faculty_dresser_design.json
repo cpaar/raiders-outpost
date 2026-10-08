@@ -1,0 +1,11 @@
+{
+  "id": "faculty_dresser_design",
+  "type": "Design",
+  "rarity": "Rare",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Fakultätskommode-Entwurf",
+    "en": "Faculty Dresser Design"
+  },
+  "imageFilename": "faculty_dresser_design_metaforge.png"
+}

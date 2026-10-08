@@ -3,7 +3,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 export type AdminProjectSetting = {
   slug: string;
   name: string;
-  kind: "workshop" | "project" | "blueprints";
+  kind: "workshop" | "project" | "blueprints" | "collection";
   inactive: boolean;
 };
 

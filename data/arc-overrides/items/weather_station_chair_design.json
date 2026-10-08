@@ -1,0 +1,11 @@
+{
+  "id": "weather_station_chair_design",
+  "type": "Design",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Wetterstationsstuhl-Entwurf",
+    "en": "Weather Station Chair Design"
+  },
+  "imageFilename": "weather_station_chair_design_metaforge.png"
+}

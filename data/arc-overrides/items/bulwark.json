@@ -1,0 +1,11 @@
+{
+  "id": "bulwark",
+  "type": "Stencil",
+  "rarity": "Legendary",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Bollwerk",
+    "en": "Bulwark"
+  },
+  "imageFilename": "bulwark.png"
+}

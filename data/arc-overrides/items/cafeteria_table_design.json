@@ -1,0 +1,11 @@
+{
+  "id": "cafeteria_table_design",
+  "type": "Design",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Cafeteria-Tisch-Entwurf",
+    "en": "Cafeteria Table Design"
+  },
+  "imageFilename": "cafeteria_table_design_metaforge.png"
+}

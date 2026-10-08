@@ -1,0 +1,11 @@
+{
+  "id": "diner_shelf_design",
+  "type": "Design",
+  "rarity": "Rare",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Entwurf: Diner-Regal",
+    "en": "Diner Shelf Design"
+  },
+  "imageFilename": "diner_shelf_design_metaforge.png"
+}

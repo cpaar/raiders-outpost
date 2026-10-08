@@ -1,0 +1,11 @@
+{
+  "id": "sacrifice",
+  "type": "Stencil",
+  "rarity": "Epic",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Opfer",
+    "en": "Sacrifice"
+  },
+  "imageFilename": "sacrifice.png"
+}

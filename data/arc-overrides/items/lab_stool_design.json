@@ -1,0 +1,11 @@
+{
+  "id": "lab_stool_design",
+  "type": "Design",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Entwurf: Laborhocker",
+    "en": "Lab Stool Design"
+  },
+  "imageFilename": "lab_stool_design_metaforge.png"
+}

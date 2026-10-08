@@ -1,0 +1,11 @@
+{
+  "id": "weather_station_table_design",
+  "type": "Design",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Wetterstationstisch-Entwurf",
+    "en": "Weather Station Table Design"
+  },
+  "imageFilename": "weather_station_table_design_metaforge.png"
+}

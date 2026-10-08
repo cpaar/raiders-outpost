@@ -1,0 +1,11 @@
+{
+  "id": "garnet",
+  "type": "Stencil",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Granat",
+    "en": "Garnet"
+  },
+  "imageFilename": "garnet_metaforge.png"
+}

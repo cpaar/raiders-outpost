@@ -1,0 +1,11 @@
+{
+  "id": "warehouse_dresser_design",
+  "type": "Design",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Entwurf: Lagerhaus-Kommode",
+    "en": "Warehouse Dresser Design"
+  },
+  "imageFilename": "warehouse_dresser_design_metaforge.png"
+}

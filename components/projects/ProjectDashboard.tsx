@@ -93,7 +93,7 @@ export function ProjectDashboard({
     }, {} as Record<string, boolean>);
   }, [activeProject]);
 
-  const useMultiStageRailLayout = activeProject?.kind !== "blueprints";
+  const useMultiStageRailLayout = activeProject?.kind !== "blueprints" && activeProject?.kind !== "collection";
 
   const handleToggleStageCompletion = useCallback(
     (stageKey: string) => {

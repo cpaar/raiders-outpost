@@ -1,0 +1,11 @@
+{
+  "id": "verdigris",
+  "type": "Stencil",
+  "rarity": "Uncommon",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Verdigris",
+    "en": "Verdigris"
+  },
+  "imageFilename": "verdigris_metaforge.png"
+}

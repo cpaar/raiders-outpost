@@ -1,0 +1,11 @@
+{
+  "id": "empyrean",
+  "type": "Stencil",
+  "rarity": "Epic",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Empyreum",
+    "en": "Empyrean"
+  },
+  "imageFilename": "empyrean.png"
+}

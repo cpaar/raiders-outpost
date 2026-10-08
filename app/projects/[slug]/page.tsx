@@ -82,7 +82,7 @@ export default function ProjectDetailPage() {
       })
     : null;
   const backCategory = categoryFromQuery ?? categoryFromProject ?? "projects";
-  const isBlueprintProject = project?.kind === "blueprints";
+  const isBlueprintProject = project?.kind === "blueprints" || project?.kind === "collection";
   const filtersReady = !isBlueprintProject || filtersHydrated;
   const effectiveQuery = isBlueprintProject ? query : "";
   const effectiveNeededOnly = isBlueprintProject ? neededOnly : false;

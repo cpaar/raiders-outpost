@@ -7,6 +7,7 @@ import {
 } from "@/lib/arc-items";
 import { stripBlueprintLabel } from "@/lib/item-labels";
 import type { AppLocale } from "@/lib/locale";
+import { COLLECTIONS } from "@/lib/collections";
 import {
   getOverridePath,
   listOverrideDir,
@@ -32,7 +33,7 @@ export type ArcProjectStage = {
 export type ArcProject = {
   slug: string;
   name: string;
-  kind: "workshop" | "project" | "blueprints";
+  kind: "workshop" | "project" | "blueprints" | "collection";
   repeatable: boolean;
   timeLimitedUntil: string | null;
   startAt: string | null;
@@ -96,46 +97,48 @@ const unixTimestampToIso = (timestamp: number | undefined) => {
   return new Date(timestamp * 1000).toISOString();
 };
 
-const buildBlueprintFallback = async (
+const buildCollections = async (
   locale: AppLocale
-): Promise<ArcProject> => {
+): Promise<ArcProject[]> => {
   const items = await loadArcItems(locale);
-  const blueprints = items.items
-    .filter((item) => item.itemType === "Blueprint")
-    .map((item) => ({
-      itemId:
-        item.id ?? item.imageFile?.replace(/\.[^/.]+$/, "") ?? "unknown",
-      displayName: item.name,
-      quantityRequired: 1,
-    }))
-    .sort((a, b) =>
-      stripBlueprintLabel(a.displayName).localeCompare(
-        stripBlueprintLabel(b.displayName),
-        locale,
-        {
-        sensitivity: "base",
-        }
-      )
-    );
+  return COLLECTIONS.map((collection) => {
+    const entries = items.items
+      .filter((item) => item.itemType === collection.itemType)
+      .map((item) => ({
+        itemId:
+          item.id ?? item.imageFile?.replace(/\.[^/.]+$/, "") ?? "unknown",
+        displayName: item.name,
+        quantityRequired: 1,
+      }))
+      .sort((a, b) =>
+        stripBlueprintLabel(a.displayName).localeCompare(
+          stripBlueprintLabel(b.displayName),
+          locale,
+          {
+          sensitivity: "base",
+          }
+        )
+      );
 
-  return {
-    slug: "blueprints",
-    name: locale === "de" ? "Blueprints" : "Blueprints",
-    kind: "blueprints",
-    repeatable: false,
-    timeLimitedUntil: null,
-    startAt: null,
-    endAt: null,
-    expeditionEndAt: null,
-    stages: [
-      {
-        stageKey: "phase-1",
-        name: "Phase 01",
-        sortOrder: 1,
-        items: blueprints,
-      },
-    ],
-  };
+    return {
+      slug: collection.slug,
+      name: collection.name[locale],
+      kind: collection.slug === "blueprints" ? "blueprints" : "collection",
+      repeatable: false,
+      timeLimitedUntil: null,
+      startAt: null,
+      endAt: null,
+      expeditionEndAt: null,
+      stages: [
+        {
+          stageKey: "phase-1",
+          name: "Phase 01",
+          sortOrder: 1,
+          items: entries,
+        },
+      ],
+    } satisfies ArcProject;
+  });
 };
 
 const resolveHideoutStageName = (locale: AppLocale, level: number) => {
@@ -287,10 +290,10 @@ const readArcProjects = (locale: AppLocale) =>
     return {
       scrapedAt: new Date().toISOString(),
       sourceUrl: "raidtheory/arcraiders-data",
-      projects: [...projects, await buildBlueprintFallback(locale)],
+      projects: [...projects, ...await buildCollections(locale)],
     };
     },
-    ["arc-projects-v7", locale],
+    ["arc-projects-v9", locale],
     { revalidate: 3600 }
   );
 

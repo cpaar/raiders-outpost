@@ -1,0 +1,11 @@
+{
+  "id": "warehouse_chair_design",
+  "type": "Design",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Lagerhausstuhl-Entwurf",
+    "en": "Warehouse Chair Design"
+  },
+  "imageFilename": "warehouse_chair_design_metaforge.png"
+}

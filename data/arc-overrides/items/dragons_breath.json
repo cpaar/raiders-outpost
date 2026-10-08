@@ -1,0 +1,11 @@
+{
+  "id": "dragons_breath",
+  "type": "Stencil",
+  "rarity": "Legendary",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Drachenatem",
+    "en": "Dragon's Breath"
+  },
+  "imageFilename": "dragons_breath.png"
+}

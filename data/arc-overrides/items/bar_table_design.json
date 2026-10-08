@@ -1,0 +1,11 @@
+{
+  "id": "bar_table_design",
+  "type": "Design",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Bar-Tisch-Entwurf",
+    "en": "Bar Table Design"
+  },
+  "imageFilename": "bar_table_design_metaforge.png"
+}

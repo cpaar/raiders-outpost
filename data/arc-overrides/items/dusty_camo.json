@@ -1,0 +1,11 @@
+{
+  "id": "dusty_camo",
+  "type": "Stencil",
+  "rarity": "Rare",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Staubige Camouflage",
+    "en": "Dusty Camo"
+  },
+  "imageFilename": "dusty_camo_metaforge.png"
+}

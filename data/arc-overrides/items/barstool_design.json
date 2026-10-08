@@ -1,0 +1,11 @@
+{
+  "id": "barstool_design",
+  "type": "Design",
+  "rarity": "Common",
+  "updatedAt": "10/08/2026",
+  "name": {
+    "de": "Barhocker-Entwurf",
+    "en": "Barstool Design"
+  },
+  "imageFilename": "barstool_design_metaforge.png"
+}
