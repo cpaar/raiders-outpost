@@ -1,0 +1,8 @@
+{
+  "id": "emperor_modulator",
+  "type": "Topside Material",
+  "rarity": "Legendary",
+  "updatedAt": "10/08/2026",
+  "name": { "en": "Emperor Modulator" },
+  "imageFilename": "emperor_modulator.png"
+}

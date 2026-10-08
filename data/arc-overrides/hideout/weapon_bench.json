@@ -1,0 +1,14 @@
+{
+  "id": "weapon_bench",
+  "maxLevel": 4,
+  "levels": [
+    {
+      "level": 4,
+      "requirementItemIds": [
+        { "itemId": "radial_press", "quantity": 3 },
+        { "itemId": "magnetic_accelerator", "quantity": 3 },
+        { "itemId": "emperor_modulator", "quantity": 1 }
+      ]
+    }
+  ]
+}

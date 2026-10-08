@@ -2,6 +2,51 @@ import { expect, test } from "@playwright/test";
 import type { ProjectProgressPayload } from "../types/projects";
 import { getLocalIdentity, login } from "./helpers";
 
+test("raiders save gunsmith level four materials across reloads", async ({ page }) => {
+  await login(page, "GunsmithFourPilot");
+  await page.evaluate(() => localStorage.setItem("arc:locale", "de"));
+  const { token } = await getLocalIdentity(page);
+  if (!token) throw new Error("Missing identity");
+  const headers = { "x-arc-token": token };
+  const response = await page.request.get("/api/projects?locale=de", { headers });
+  expect(response.ok()).toBeTruthy();
+  const payload = await response.json() as ProjectProgressPayload;
+  const bench = payload.projects.find((project) => project.slug === "weapon_bench")!;
+  expect(bench.stages.map((stage) => stage.stageKey)).toEqual(["level-1", "level-2", "level-3", "level-4"]);
+  const stage = bench.stages[3];
+  expect(stage.name).toBe("Stufe 04");
+  expect(stage.items.map(({ itemId, quantityRequired }) => ({ itemId, quantityRequired }))).toEqual([
+    { itemId: "radial_press", quantityRequired: 3 },
+    { itemId: "magnetic_accelerator", quantityRequired: 3 },
+    { itemId: "emperor_modulator", quantityRequired: 1 },
+  ]);
+  for (const item of stage.items) {
+    expect(item.displayName).not.toBe(item.itemId);
+    expect(item.imageFile).toBeTruthy();
+    expect((await page.request.get(`/api/arc-items/image?file=${item.imageFile}`)).ok()).toBeTruthy();
+  }
+  const reset = await page.request.patch("/api/projects", {
+    headers,
+    data: { updates: stage.items.map((item) => ({ projectItemId: item.projectItemId, quantityOwned: 0 })) },
+  });
+  expect(reset.ok()).toBeTruthy();
+  await page.goto("/hideout");
+  await page.getByTestId("project-card-link-weapon_bench").click();
+  const level = page.getByTestId("project-stage-columns").getByTestId("project-stage-level-4");
+  await expect(level).toBeVisible();
+  const press = level.locator('[data-item-id="radial_press"]');
+  await expect(press).toHaveAttribute("data-required", "3");
+  const saved = page.waitForResponse((result) => result.url().includes("/api/projects") && result.request().method() === "PATCH");
+  await press.getByTestId("qty-plus").click();
+  expect((await saved).ok()).toBeTruthy();
+  await page.reload();
+  await expect(press).toHaveAttribute("data-quantity", "1");
+  await page.getByRole("main").screenshot({ path: "test-results/gunsmith-level-four.png" });
+  await page.goto("/hideout");
+  await expect(page.getByTestId("hideout-needs-weapon_bench").getByTestId("hideout-needs-item-radial_press"))
+    .toHaveAttribute("data-missing", "2");
+});
+
 test("hideout shows compact missing material totals and keeps them in sync with saved progress", async ({ page }) => {
   await login(page, "HideoutNeedsPilot");
   await page.evaluate(() => localStorage.setItem("arc:locale", "de"));

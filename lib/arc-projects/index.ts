@@ -295,7 +295,7 @@ const readArcProjects = (locale: AppLocale) =>
       projects: [...projects, ...await buildCollections(locale)],
     };
     },
-    ["arc-projects-v10", locale],
+    ["arc-projects-v11", locale],
     { revalidate: 3600 }
   );
 
