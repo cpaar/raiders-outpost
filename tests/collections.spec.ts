@@ -1,6 +1,29 @@
 import { expect, test, type Page } from "@playwright/test";
 import type { ProjectProgressPayload } from "../types/projects";
 import { getLocalIdentity, login } from "./helpers";
+import { stripBlueprintLabel, stripFurnitureDesignLabel } from "../lib/item-labels";
+
+test("collection names keep meaningful words while removing plan markers", () => {
+  for (const [label, expected] of [
+    ["Entwurf: Robuster Laborstuhl", "Robuster Laborstuhl"],
+    ["Alpiner Kleiderschrank-Entwurf", "Alpiner Kleiderschrank"],
+    ["Archiv-Stehlampe Entwurf", "Archiv-Stehlampe"],
+    ["Kronleuchterentwurf", "Kronleuchter"],
+    ["Stehlampenentwurf", "Stehlampen"],
+    ["Grüner geometrischer Stuhlentwurf", "Grüner geometrischer Stuhl"],
+    ["Sturdy Lab Cabinet (Wide) Design", "Sturdy Lab Cabinet (Wide)"],
+    [" Design: Floor Lamp ", "Floor Lamp"],
+    ["Floor Lamp – DESIGN", "Floor Lamp"],
+    ["Designer Chair", "Designer Chair"],
+    ["Redesign", "Redesign"],
+    ["Entwurfszeichnung", "Entwurfszeichnung"],
+    ["Waffen-Display", "Waffen-Display"],
+  ]) {
+    expect(stripFurnitureDesignLabel(label)).toBe(expected);
+  }
+  expect(stripBlueprintLabel("Bauplan: Enterhaken")).toBe("Enterhaken");
+  expect(stripBlueprintLabel("Grappling Hook Blueprint")).toBe("Grappling Hook");
+});
 
 const waitForCollectionImages = async (page: Page) => {
   const images = page.locator("[data-item-id] img");
@@ -51,6 +74,18 @@ test("learned blueprints, furniture and stencils persist with separate tabs and 
   await expect(page.locator('[data-item-id="grappling_hook_blueprint"]')).toHaveCount(0);
   await expect(page.locator('[data-item-id="bulwark"]')).toHaveCount(0);
   await expect(page.locator('[data-item-id="alpine_wardrobe_design"] img')).toBeVisible();
+  for (const [itemId, label] of [
+    ["alpine_wardrobe_design", "Alpiner Kleiderschrank"],
+    ["sturdy_lab_chair_design", "Robuster Laborstuhl"],
+    ["archive_floor_lamp_design", "Archiv-Stehlampe"],
+    ["chandelier_design", "Kronleuchter"],
+    ["sturdy_lab_cabinet_wide_design", "Robuster Laborschrank (breit)"],
+  ]) {
+    await expect(page.locator(`[data-item-id="${itemId}"] [title]`)).toHaveAttribute("title", label);
+  }
+  const furnitureNames = furniture.stages[0].items.map((item) => item.displayName);
+  expect(furnitureNames.every((name) => !/entwurf|\sdesign$/i.test(name))).toBe(true);
+  expect(furnitureNames).toEqual([...furnitureNames].sort((a, b) => a.localeCompare(b, "de", { sensitivity: "base" })));
   await expect(page.getByRole("link", { name: "MetaForge", exact: true })).toHaveAttribute("href", "https://metaforge.app/arc-raiders");
   const alpine = furniture.stages[0].items.find((item) => item.itemId === "alpine_wardrobe_design")!;
   expect(alpine.imageFile).toBe("alpine_wardrobe_design_metaforge.png");
@@ -98,4 +133,12 @@ test("learned blueprints, furniture and stencils persist with separate tabs and 
   await expect(design).toHaveAttribute("data-quantity", "1");
   await page.getByTestId("collection-tab-blueprints").click();
   await expect(page.locator('[data-item-id="grappling_hook_blueprint"]')).toHaveAttribute("data-quantity", "1");
+  await page.evaluate(() => localStorage.setItem("arc:locale", "en"));
+  await page.reload();
+  await page.getByTestId("collection-tab-furniture_designs").click();
+  await page.getByTestId("collection-search-toggle").click();
+  await page.getByTestId("collection-search").fill("Alpine Wardrobe");
+  await expect(page.locator("[data-item-id]")).toHaveCount(1);
+  await expect(design.locator("[title]")).toHaveAttribute("title", "Alpine Wardrobe");
+  await expect(design).toHaveAttribute("data-quantity", "1");
 });

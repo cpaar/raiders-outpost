@@ -5,7 +5,7 @@ import {
   getArcItemLookupKeys,
   loadArcItems,
 } from "@/lib/arc-items";
-import { stripBlueprintLabel } from "@/lib/item-labels";
+import { stripBlueprintLabel, stripFurnitureDesignLabel } from "@/lib/item-labels";
 import type { AppLocale } from "@/lib/locale";
 import { COLLECTIONS } from "@/lib/collections";
 import {
@@ -107,7 +107,9 @@ const buildCollections = async (
       .map((item) => ({
         itemId:
           item.id ?? item.imageFile?.replace(/\.[^/.]+$/, "") ?? "unknown",
-        displayName: item.name,
+        displayName: collection.itemType === "Design"
+          ? stripFurnitureDesignLabel(item.name)
+          : item.name,
         quantityRequired: 1,
       }))
       .sort((a, b) =>
@@ -293,7 +295,7 @@ const readArcProjects = (locale: AppLocale) =>
       projects: [...projects, ...await buildCollections(locale)],
     };
     },
-    ["arc-projects-v9", locale],
+    ["arc-projects-v10", locale],
     { revalidate: 3600 }
   );
 
