@@ -1,0 +1,11 @@
+{
+  "id": "laser_level",
+  "type": "Topside Material",
+  "rarity": "Epic",
+  "updatedAt": "10/09/2026",
+  "name": {
+    "de": "Laser-Wasserwaage",
+    "en": "Laser Level"
+  },
+  "imageFilename": "laser_level_metaforge.png"
+}

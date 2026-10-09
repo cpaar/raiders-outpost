@@ -14,7 +14,7 @@ test("raiders track new blueprints, outpost objectives and research materials ac
   const outpost = payload.projects.find((p) => p.slug === "sheltered_retreat_project")!;
   const research = payload.projects.find((p) => p.slug === "research_station")!;
   const blueprints = payload.projects.find((p) => p.slug === "blueprints")!;
-  expect(outpost.stages).toHaveLength(3);
+  expect(outpost.stages).toHaveLength(6);
   expect(research.stages).toHaveLength(4);
   const newBlueprintIds = ["advanced_camera", "banjo", "bantam", "emperor_gateway_conduit", "grappling_hook", "stiletto", "tether_launcher", "yank_grenade"].map((id) => `${id}_blueprint`);
   for (const id of newBlueprintIds) {
@@ -41,7 +41,7 @@ test("raiders track new blueprints, outpost objectives and research materials ac
   expect((await savePhoto).ok()).toBeTruthy();
   await page.reload();
   await expect(photo).toHaveAttribute("aria-checked", "true");
-  await expect(columns.locator('[data-item-id="planks"]')).toHaveAttribute("data-required", "3");
+  await expect(columns.getByTestId("project-stage-phase-2").locator('[data-item-id="planks"]')).toHaveAttribute("data-required", "3");
   await page.getByRole("main").screenshot({ path: "test-results/frozen-trail-outpost.png" });
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(page.getByTestId("project-stage-vertical-layout").getByRole("checkbox").first()).toHaveAttribute("aria-checked", "true");
@@ -76,12 +76,12 @@ test("raiders track new blueprints, outpost objectives and research materials ac
   expect(needsResponse.ok()).toBeTruthy();
   const needs = await needsResponse.json() as { items: { itemId: string; totalNeeded: number }[] };
   expect(needs.items.some((item) => item.itemId.startsWith("objective:"))).toBe(false);
-  expect(needs.items.find((item) => item.itemId === "planks")?.totalNeeded).toBe(37);
+  expect(needs.items.find((item) => item.itemId === "planks")?.totalNeeded).toBe(72);
   const slugResponse = await page.request.get("/api/user/public-profile", { headers });
   const { slug } = await slugResponse.json() as { slug: string };
   const publicResponse = await page.request.get(`/api/public/${slug}?locale=de`);
   expect(publicResponse.ok()).toBeTruthy();
   const publicNeeds = await publicResponse.json() as typeof needs;
   expect(publicNeeds.items.some((item) => item.itemId.startsWith("objective:"))).toBe(false);
-  expect(publicNeeds.items.find((item) => item.itemId === "planks")?.totalNeeded).toBe(37);
+  expect(publicNeeds.items.find((item) => item.itemId === "planks")?.totalNeeded).toBe(72);
 });

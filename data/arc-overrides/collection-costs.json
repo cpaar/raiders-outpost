@@ -1,0 +1,2838 @@
+{
+  "updatedAt": "2026-10-09",
+  "sources": [
+    "https://arctracker.io/research",
+    "https://arctracker.io/outposts"
+  ],
+  "items": {
+    "alpine_wardrobe_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "metal_brackets",
+            "quantity": 2
+          },
+          {
+            "itemId": "planks",
+            "quantity": 30
+          }
+        ]
+      },
+      "research": null
+    },
+    "angled_grip_ii_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "arc_flex_rubber",
+            "quantity": 5
+          },
+          {
+            "itemId": "mechanical_components",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "anvil_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "bully_fragmenter",
+            "quantity": 5
+          },
+          {
+            "itemId": "rusted_tools",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "archive_floor_lamp_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "light_bulb",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      },
+      "research": null
+    },
+    "bantam_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "hornet_driver",
+            "quantity": 8
+          }
+        ]
+      }
+    },
+    "bar_table_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 4
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 14
+          }
+        ]
+      },
+      "research": null
+    },
+    "barricade_kit_blueprint": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "rusty_arc_steel",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    "barstool_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "metal_parts",
+            "quantity": 15
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "fabric",
+            "quantity": 4
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 8
+          }
+        ]
+      }
+    },
+    "battered_aviary_table_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "chemicals",
+            "quantity": 2
+          },
+          {
+            "itemId": "planks",
+            "quantity": 20
+          }
+        ]
+      },
+      "research": {
+        "points": 1500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "laser_level",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "battered_bureau_chair_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "mechanical_components",
+            "quantity": 3
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "fabric",
+            "quantity": 4
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 8
+          }
+        ]
+      }
+    },
+    "battered_bureau_sofa_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "very_comfortable_pillow",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 10
+          },
+          {
+            "itemId": "spring_cushion",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "battered_den_bed_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "sheetmetal",
+            "quantity": 2
+          },
+          {
+            "itemId": "torn_blanket",
+            "quantity": 1
+          }
+        ]
+      },
+      "research": null
+    },
+    "battered_den_shelf_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 5
+          }
+        ]
+      },
+      "research": null
+    },
+    "battered_diner_chair_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "metal_parts",
+            "quantity": 15
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "battered_faculty_table_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "metal_brackets",
+            "quantity": 2
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      }
+    },
+    "battered_lab_cabinet_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "mechanical_components",
+            "quantity": 3
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      }
+    },
+    "battered_lab_cabinet_wide_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "mechanical_components",
+            "quantity": 3
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 2
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 20
+          }
+        ]
+      }
+    },
+    "battered_lab_chair_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "mechanical_components",
+            "quantity": 3
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "sheetmetal",
+            "quantity": 8
+          },
+          {
+            "itemId": "steel_spring",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "battered_shelf_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "rusted_bolts",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      }
+    },
+    "battered_stash_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "chemicals",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      },
+      "research": null
+    },
+    "battered_weapon_rack_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      },
+      "research": null
+    },
+    "bettina_blueprint": {
+      "research": {
+        "points": 4500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "complex_gun_parts",
+            "quantity": 1
+          },
+          {
+            "itemId": "rocketeer_driver",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "blue_lab_cabinet_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "rusted_bolts",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 20
+          }
+        ]
+      }
+    },
+    "bureau_ceiling_lamp_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "broken_flashlight",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "light_bulb",
+            "quantity": 1
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      }
+    },
+    "burletta_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "simple_gun_parts",
+            "quantity": 8
+          }
+        ]
+      }
+    },
+    "cafeteria_table_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "metal_brackets",
+            "quantity": 2
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "rubber_parts",
+            "quantity": 2
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      }
+    },
+    "canto_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "skulker_targeter",
+            "quantity": 10
+          },
+          {
+            "itemId": "steel_spring",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "chambers_lamp_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "broken_flashlight",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "light_bulb",
+            "quantity": 1
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      }
+    },
+    "chambers_nightstand_design": {
+      "research": {
+        "points": 1500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "radial_press",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "chemicals",
+            "quantity": 2
+          },
+          {
+            "itemId": "planks",
+            "quantity": 10
+          }
+        ]
+      }
+    },
+    "chambers_shelf_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      },
+      "research": null
+    },
+    "chandelier_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "candle_holder",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 20
+          }
+        ]
+      },
+      "research": null
+    },
+    "clinic_medical_cabinet_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 20
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "chemicals",
+            "quantity": 2
+          },
+          {
+            "itemId": "planks",
+            "quantity": 19
+          }
+        ]
+      }
+    },
+    "combat_mk3_flanking_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "arc_circuitry",
+            "quantity": 5
+          },
+          {
+            "itemId": "mechanical_components",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    "compensator_ii_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "cooling_coil",
+            "quantity": 1
+          },
+          {
+            "itemId": "rusty_arc_steel",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "complex_gun_parts_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "advanced_mechanical_components",
+            "quantity": 1
+          },
+          {
+            "itemId": "complex_gun_parts",
+            "quantity": 2
+          }
+        ]
+      }
+    },
+    "console_chest_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 20
+          }
+        ]
+      },
+      "research": null
+    },
+    "crash_mat_blueprint": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "durable_cloth",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "deadline_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "comet_igniter",
+            "quantity": 5
+          },
+          {
+            "itemId": "fossilized_lightning",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "defibrillator_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "adrenaline_shot",
+            "quantity": 5
+          },
+          {
+            "itemId": "syringe",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    "diner_ceiling_lamp_design": {
+      "research": {
+        "points": 1500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "broken_taser",
+            "quantity": 3
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "light_bulb",
+            "quantity": 2
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      }
+    },
+    "diner_cupboard_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 40
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "metal_brackets",
+            "quantity": 1
+          },
+          {
+            "itemId": "planks",
+            "quantity": 20
+          }
+        ]
+      }
+    },
+    "diner_shelf_design": {
+      "research": {
+        "points": 1500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "laser_level",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 30
+          },
+          {
+            "itemId": "plastic_parts",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "diner_sofa_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 20
+          },
+          {
+            "itemId": "spring_cushion",
+            "quantity": 3
+          }
+        ]
+      },
+      "research": null
+    },
+    "diner_stool_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "metal_parts",
+            "quantity": 15
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "fabric",
+            "quantity": 2
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "diner_table_design": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "statuette",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "radial_press",
+            "quantity": 1
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 20
+          }
+        ]
+      }
+    },
+    "draped_debris_a_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "fabric",
+            "quantity": 5
+          },
+          {
+            "itemId": "planks",
+            "quantity": 5
+          }
+        ]
+      },
+      "research": null
+    },
+    "draped_debris_b_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "fabric",
+            "quantity": 5
+          },
+          {
+            "itemId": "planks",
+            "quantity": 5
+          }
+        ]
+      },
+      "research": null
+    },
+    "draped_debris_c_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "fabric",
+            "quantity": 5
+          },
+          {
+            "itemId": "planks",
+            "quantity": 5
+          }
+        ]
+      },
+      "research": null
+    },
+    "draped_debris_e_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "fabric",
+            "quantity": 5
+          },
+          {
+            "itemId": "planks",
+            "quantity": 5
+          }
+        ]
+      },
+      "research": null
+    },
+    "draped_debris_f_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "fabric",
+            "quantity": 5
+          },
+          {
+            "itemId": "planks",
+            "quantity": 5
+          }
+        ]
+      },
+      "research": null
+    },
+    "draped_debris_g_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "fabric",
+            "quantity": 5
+          },
+          {
+            "itemId": "planks",
+            "quantity": 5
+          }
+        ]
+      },
+      "research": null
+    },
+    "explosive_mine_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "comet_igniter",
+            "quantity": 3
+          },
+          {
+            "itemId": "sensors",
+            "quantity": 2
+          }
+        ]
+      }
+    },
+    "extended_barrel_ii_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "rusty_arc_steel",
+            "quantity": 5
+          },
+          {
+            "itemId": "steel_cable",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "extended_light_mag_ii_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "dried_out_arc_resin",
+            "quantity": 5
+          },
+          {
+            "itemId": "wires",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "extended_medium_mag_ii_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "canister",
+            "quantity": 3
+          },
+          {
+            "itemId": "dried_out_arc_resin",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "extended_shotgun_mag_ii_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "dried_out_arc_resin",
+            "quantity": 5
+          },
+          {
+            "itemId": "mechanical_components",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "faculty_closet_design": {
+      "research": {
+        "points": 1500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "rusted_bolts",
+            "quantity": 3
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 25
+          }
+        ]
+      }
+    },
+    "faculty_dresser_design": {
+      "research": {
+        "points": 1500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "cable_stripper",
+            "quantity": 2
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "chemicals",
+            "quantity": 5
+          },
+          {
+            "itemId": "planks",
+            "quantity": 25
+          }
+        ]
+      }
+    },
+    "floor_lamp_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "light_bulb",
+            "quantity": 1
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      },
+      "research": null
+    },
+    "gas_mine_blueprint": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "household_cleaner",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    "geometric_fabric_chair_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "durable_cloth",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      },
+      "research": null
+    },
+    "glass_ceiling_lamp_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "light_bulb",
+            "quantity": 2
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      },
+      "research": null
+    },
+    "grappling_hook_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "rope",
+            "quantity": 10
+          }
+        ]
+      }
+    },
+    "green_geometric_chair_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "durable_cloth",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      },
+      "research": null
+    },
+    "green_geometric_sofa_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "durable_cloth",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      },
+      "research": null
+    },
+    "green_lab_sofa_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "fabric",
+            "quantity": 12
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      },
+      "research": null
+    },
+    "heavy_gun_parts_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "simple_gun_parts",
+            "quantity": 5
+          },
+          {
+            "itemId": "unusable_weapon",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "holly_bush_design": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "candleberries",
+            "quantity": 20
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "assorted_seeds",
+            "quantity": 30
+          },
+          {
+            "itemId": "fertilizer",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    "hotel_chair_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "spring_cushion",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "durable_cloth",
+            "quantity": 5
+          },
+          {
+            "itemId": "planks",
+            "quantity": 15
+          }
+        ]
+      }
+    },
+    "hullcracker_blueprint": {
+      "research": {
+        "points": 4500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "bombardier_cell",
+            "quantity": 5
+          },
+          {
+            "itemId": "complex_gun_parts",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "il_toro_blueprint": {
+      "research": {
+        "points": 1500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "shredder_gyro",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "jolt_mine_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "advanced_arc_powercell",
+            "quantity": 3
+          },
+          {
+            "itemId": "industrial_battery",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "lab_ceiling_light_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "broken_flashlight",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "light_bulb",
+            "quantity": 1
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      }
+    },
+    "lab_stool_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "mechanical_components",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "light_gun_parts_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "simple_gun_parts",
+            "quantity": 5
+          },
+          {
+            "itemId": "unusable_weapon",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "looting_mk3_safekeeper_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "arc_circuitry",
+            "quantity": 5
+          },
+          {
+            "itemId": "canister",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "looting_mk3_survivor_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "arc_circuitry",
+            "quantity": 5
+          },
+          {
+            "itemId": "syringe",
+            "quantity": 2
+          }
+        ]
+      }
+    },
+    "lure_grenade_blueprint": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "arc_circuitry",
+            "quantity": 6
+          }
+        ]
+      }
+    },
+    "medium_gun_parts_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "simple_gun_parts",
+            "quantity": 5
+          },
+          {
+            "itemId": "unusable_weapon",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "multicolored_geometric_sofa_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "durable_cloth",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      },
+      "research": null
+    },
+    "muzzle_brake_ii_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "rusty_arc_steel",
+            "quantity": 5
+          },
+          {
+            "itemId": "steel_cable",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "ornate_den_bed_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 20
+          },
+          {
+            "itemId": "very_comfortable_pillow",
+            "quantity": 2
+          }
+        ]
+      },
+      "research": null
+    },
+    "ornate_den_shelf_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 25
+          }
+        ]
+      },
+      "research": null
+    },
+    "ornate_stash_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "ion_sputter",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 20
+          }
+        ]
+      },
+      "research": null
+    },
+    "ornate_wardrobe_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "metal_brackets",
+            "quantity": 2
+          },
+          {
+            "itemId": "planks",
+            "quantity": 50
+          }
+        ]
+      },
+      "research": null
+    },
+    "osprey_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "camera_lens",
+            "quantity": 1
+          },
+          {
+            "itemId": "sentinel_firing_core",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    "polished_den_bed_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 15
+          },
+          {
+            "itemId": "torn_blanket",
+            "quantity": 3
+          }
+        ]
+      },
+      "research": null
+    },
+    "polished_den_shelf_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 20
+          }
+        ]
+      },
+      "research": null
+    },
+    "polished_diner_chair_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "metal_parts",
+            "quantity": 15
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "polished_faculty_chair_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 5
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "chemicals",
+            "quantity": 2
+          },
+          {
+            "itemId": "planks",
+            "quantity": 9
+          }
+        ]
+      }
+    },
+    "polished_faculty_table_design": {
+      "research": {
+        "points": 1500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "laser_level",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "chemicals",
+            "quantity": 2
+          },
+          {
+            "itemId": "planks",
+            "quantity": 30
+          }
+        ]
+      }
+    },
+    "polished_round_sofa_design": {
+      "research": {
+        "points": 1500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "very_comfortable_pillow",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 15
+          },
+          {
+            "itemId": "spring_cushion",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    "polished_stash_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "flow_controller",
+            "quantity": 1
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      },
+      "research": null
+    },
+    "polished_study_sofa_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "durable_cloth",
+            "quantity": 10
+          },
+          {
+            "itemId": "planks",
+            "quantity": 15
+          }
+        ]
+      },
+      "research": null
+    },
+    "polished_wardrobe_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 30
+          }
+        ]
+      },
+      "research": null
+    },
+    "polished_weapon_rack_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 10
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 20
+          }
+        ]
+      },
+      "research": null
+    },
+    "powered_descender_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "advanced_electrical_components",
+            "quantity": 1
+          },
+          {
+            "itemId": "cooling_fan",
+            "quantity": 2
+          }
+        ]
+      }
+    },
+    "printed_fabric_chair_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "durable_cloth",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      },
+      "research": null
+    },
+    "printed_lab_sofa_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "durable_cloth",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      },
+      "research": null
+    },
+    "pulse_mine_blueprint": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "industrial_battery",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    "rascal_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "arc_alloy",
+            "quantity": 15
+          },
+          {
+            "itemId": "bombardier_cell",
+            "quantity": 2
+          }
+        ]
+      }
+    },
+    "red_study_sofa_design": {
+      "research": {
+        "points": 1500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "very_comfortable_pillow",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          },
+          {
+            "itemId": "spring_cushion",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    "remote_raider_flare_blueprint": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "chemicals",
+            "quantity": 25
+          }
+        ]
+      }
+    },
+    "res_sofa_01_y150_a_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "very_comfortable_pillow",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "durable_cloth",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      }
+    },
+    "restaurant_table_design": {
+      "research": {
+        "points": 1500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "laser_level",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 30
+          },
+          {
+            "itemId": "plastic_parts",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "security_chair_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "mechanical_components",
+            "quantity": 5
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "durable_cloth",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      }
+    },
+    "seeker_grenade_blueprint": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "rocketeer_driver",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "shotgun_choke_ii_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "heavy_gun_parts",
+            "quantity": 1
+          },
+          {
+            "itemId": "rusty_arc_steel",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "showstopper_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "hornet_driver",
+            "quantity": 5
+          },
+          {
+            "itemId": "industrial_battery",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    "silencer_i_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "cooling_coil",
+            "quantity": 1
+          },
+          {
+            "itemId": "rusty_arc_steel",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "silencer_ii_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "advanced_mechanical_components",
+            "quantity": 1
+          },
+          {
+            "itemId": "arc_performance_steel",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "small_lab_cabinet_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "metal_parts",
+            "quantity": 15
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "rubber_parts",
+            "quantity": 4
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 8
+          }
+        ]
+      }
+    },
+    "smoke_grenade_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "gas_grenade",
+            "quantity": 3
+          },
+          {
+            "itemId": "household_cleaner",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "solid_green_chair_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "durable_cloth",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      },
+      "research": null
+    },
+    "stable_stock_ii_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "arc_flex_rubber",
+            "quantity": 5
+          },
+          {
+            "itemId": "rubber_pad",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "stiletto_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "wasp_driver",
+            "quantity": 15
+          }
+        ]
+      }
+    },
+    "study_armchair_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 25
+          },
+          {
+            "itemId": "very_comfortable_pillow",
+            "quantity": 3
+          }
+        ]
+      },
+      "research": null
+    },
+    "study_ceiling_lamp_design": {
+      "research": {
+        "points": 1500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "broken_taser",
+            "quantity": 3
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "light_bulb",
+            "quantity": 2
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      }
+    },
+    "study_piano_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "advanced_mechanical_components",
+            "quantity": 3
+          },
+          {
+            "itemId": "planks",
+            "quantity": 50
+          }
+        ]
+      },
+      "research": null
+    },
+    "study_tv_stand_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "metal_brackets",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "rubber_parts",
+            "quantity": 2
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      }
+    },
+    "sturdy_aviary_table_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "radial_press",
+            "quantity": 1
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 20
+          }
+        ]
+      },
+      "research": null
+    },
+    "sturdy_bureau_chair_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "metal_parts",
+            "quantity": 10
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "fabric",
+            "quantity": 4
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 8
+          }
+        ]
+      }
+    },
+    "sturdy_bureau_sofa_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      }
+    },
+    "sturdy_den_bed_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          },
+          {
+            "itemId": "torn_blanket",
+            "quantity": 2
+          }
+        ]
+      },
+      "research": null
+    },
+    "sturdy_den_shelf_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 10
+          }
+        ]
+      },
+      "research": null
+    },
+    "sturdy_faculty_chair_design": {
+      "research": {
+        "points": 1500,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "radial_press",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "chemicals",
+            "quantity": 2
+          },
+          {
+            "itemId": "planks",
+            "quantity": 15
+          }
+        ]
+      }
+    },
+    "sturdy_faculty_table_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "mechanical_components",
+            "quantity": 5
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 4
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 18
+          }
+        ]
+      }
+    },
+    "sturdy_lab_cabinet_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "metal_brackets",
+            "quantity": 2
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      }
+    },
+    "sturdy_lab_cabinet_wide_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "metal_brackets",
+            "quantity": 3
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          }
+        ]
+      }
+    },
+    "sturdy_lab_chair_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "mechanical_components",
+            "quantity": 3
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "fabric",
+            "quantity": 4
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 8
+          }
+        ]
+      }
+    },
+    "sturdy_shelf_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "rusted_bolts",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 25
+          }
+        ]
+      }
+    },
+    "sturdy_stash_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "sheetmetal",
+            "quantity": 15
+          },
+          {
+            "itemId": "voltage_converter",
+            "quantity": 3
+          }
+        ]
+      },
+      "research": null
+    },
+    "sturdy_wardrobe_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 4
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 8
+          }
+        ]
+      },
+      "research": null
+    },
+    "sturdy_weapon_rack_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "sheetmetal",
+            "quantity": 10
+          }
+        ]
+      },
+      "research": null
+    },
+    "surge_coil_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "battery",
+            "quantity": 10
+          },
+          {
+            "itemId": "hornet_driver",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    "tactical_mk3_defensive_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "advanced_arc_powercell",
+            "quantity": 2
+          },
+          {
+            "itemId": "arc_circuitry",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "tactical_mk3_revival_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "antiseptic",
+            "quantity": 3
+          },
+          {
+            "itemId": "arc_circuitry",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "tactical_mk3_smoke_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "arc_circuitry",
+            "quantity": 5
+          },
+          {
+            "itemId": "smoke_grenade",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "tagging_grenade_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "broken_guidance_system",
+            "quantity": 2
+          },
+          {
+            "itemId": "sensors",
+            "quantity": 2
+          }
+        ]
+      }
+    },
+    "tether_launcher_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "steel_cable",
+            "quantity": 3
+          },
+          {
+            "itemId": "unusable_weapon",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "torrente_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "bastion_cell",
+            "quantity": 3
+          },
+          {
+            "itemId": "cooling_fan",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "trailblazer_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "crude_explosives",
+            "quantity": 5
+          },
+          {
+            "itemId": "turbine_compressor",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "trigger_nade_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "pop_trigger",
+            "quantity": 2
+          },
+          {
+            "itemId": "radio",
+            "quantity": 2
+          }
+        ]
+      }
+    },
+    "tufted_sofa_design": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "very_comfortable_pillow",
+            "quantity": 3
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 20
+          },
+          {
+            "itemId": "spring_cushion",
+            "quantity": 3
+          }
+        ]
+      }
+    },
+    "venator_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "leaper_pulse_unit",
+            "quantity": 3
+          },
+          {
+            "itemId": "mechanical_components",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "venetian_dresser_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 25
+          }
+        ]
+      },
+      "research": null
+    },
+    "vertical_grip_ii_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "arc_flex_rubber",
+            "quantity": 5
+          },
+          {
+            "itemId": "mechanical_components",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    "vertical_grip_iii_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "advanced_mechanical_components",
+            "quantity": 1
+          },
+          {
+            "itemId": "arc_motion_core",
+            "quantity": 6
+          }
+        ]
+      }
+    },
+    "vita_shot_blueprint": {
+      "research": {
+        "points": 2000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "microscope",
+            "quantity": 2
+          },
+          {
+            "itemId": "syringe",
+            "quantity": 2
+          }
+        ]
+      }
+    },
+    "vita_spray_blueprint": {
+      "research": {
+        "points": 3000,
+        "stationLevel": 3,
+        "materials": [
+          {
+            "itemId": "antiseptic",
+            "quantity": 5
+          },
+          {
+            "itemId": "chemicals",
+            "quantity": 50
+          }
+        ]
+      }
+    },
+    "warehouse_chair_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "metal_parts",
+            "quantity": 15
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "warehouse_desk_design": {
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "rubber_parts",
+            "quantity": 2
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 20
+          }
+        ]
+      },
+      "research": null
+    },
+    "warehouse_dresser_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "sheetmetal",
+            "quantity": 30
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 4
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 20
+          }
+        ]
+      }
+    },
+    "weather_station_chair_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "mechanical_components",
+            "quantity": 1
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 2
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 6
+          }
+        ]
+      }
+    },
+    "weather_station_table_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "sheetmetal",
+            "quantity": 30
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "plastic_parts",
+            "quantity": 5
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 18
+          }
+        ]
+      }
+    },
+    "white_flag_blueprint": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "winter_table_design": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 2,
+        "materials": [
+          {
+            "itemId": "planks",
+            "quantity": 40
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "metal_brackets",
+            "quantity": 1
+          },
+          {
+            "itemId": "planks",
+            "quantity": 20
+          }
+        ]
+      }
+    },
+    "work_light_design": {
+      "research": {
+        "points": 500,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "electrical_components",
+            "quantity": 3
+          }
+        ]
+      },
+      "crafting": {
+        "materials": [
+          {
+            "itemId": "red_light_stick",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 5
+          }
+        ]
+      }
+    },
+    "yank_grenade_blueprint": {
+      "research": {
+        "points": 1000,
+        "stationLevel": 1,
+        "materials": [
+          {
+            "itemId": "steel_cable",
+            "quantity": 8
+          }
+        ]
+      }
+    }
+  }
+}

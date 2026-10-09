@@ -1,0 +1,11 @@
+{
+  "id": "cable_stripper",
+  "type": "Topside Material",
+  "rarity": "Uncommon",
+  "updatedAt": "10/09/2026",
+  "name": {
+    "de": "Abisolierzange",
+    "en": "Cable Stripper"
+  },
+  "imageFilename": "cable_stripper_metaforge.png"
+}

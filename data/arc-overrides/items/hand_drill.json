@@ -1,0 +1,11 @@
+{
+  "id": "hand_drill",
+  "type": "Topside Material",
+  "rarity": "Rare",
+  "updatedAt": "10/09/2026",
+  "name": {
+    "de": "Handbohrer",
+    "en": "Hand Drill"
+  },
+  "imageFilename": "hand_drill_metaforge.png"
+}

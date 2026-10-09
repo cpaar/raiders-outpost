@@ -1,0 +1,11 @@
+{
+  "id": "epoxy_bucket",
+  "type": "Recyclable",
+  "rarity": "Rare",
+  "updatedAt": "10/09/2026",
+  "name": {
+    "de": "Epoxidharzeimer",
+    "en": "Epoxy Bucket"
+  },
+  "imageFilename": "epoxy_bucket_metaforge.png"
+}

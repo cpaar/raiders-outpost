@@ -47,7 +47,7 @@
   },
   {
     "id": "ascending_the_mountain_project",
-    "disabled": false,
+    "disabled": true,
     "name": {
       "en": "Ascending the Mountain",
       "de": "Ascending the Mountain"
@@ -159,8 +159,8 @@
     "id": "sheltered_retreat_project",
     "disabled": false,
     "name": {
-      "de": "Außenposten: Rückzugsort",
-      "en": "Outpost: Sheltered Retreat"
+      "de": "Außenposten",
+      "en": "Outpost"
     },
     "phases": [
       {
@@ -219,6 +219,69 @@
               "de": "Lenke die ARC-Maschinen ab und zerstöre sie, damit die Bauarbeiten ungestört erfolgen können.",
               "en": "Distract and destroy ARC machines to allow for the construction efforts to take place undisturbed."
             }
+          }
+        ]
+      },
+      {
+        "phase": 4,
+        "name": {
+          "de": "Raum 2",
+          "en": "Room 2"
+        },
+        "requirementItemIds": [
+          {
+            "itemId": "cable_stripper",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 20
+          },
+          {
+            "itemId": "steel_cable",
+            "quantity": 3
+          }
+        ]
+      },
+      {
+        "phase": 5,
+        "name": {
+          "de": "Raum 3",
+          "en": "Room 3"
+        },
+        "requirementItemIds": [
+          {
+            "itemId": "epoxy_bucket",
+            "quantity": 3
+          },
+          {
+            "itemId": "hand_drill",
+            "quantity": 3
+          },
+          {
+            "itemId": "planks",
+            "quantity": 35
+          }
+        ]
+      },
+      {
+        "phase": 6,
+        "name": {
+          "de": "Raum 4",
+          "en": "Room 4"
+        },
+        "requirementItemIds": [
+          {
+            "itemId": "insulation_roll",
+            "quantity": 3
+          },
+          {
+            "itemId": "laser_level",
+            "quantity": 3
+          },
+          {
+            "itemId": "sheetmetal",
+            "quantity": 40
           }
         ]
       }

@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { loadArcProjects } from "@/lib/arc-projects";
 import type { ProjectWithStages } from "@/lib/server/projects/types";
+import { mergeOutpostProgress } from "@/lib/server/projects/merge-outpost-progress";
 
 let projectsSeedPromise: Promise<ProjectWithStages[]> | null = null;
 let projectsSeedSignature: string | null = null;
@@ -39,6 +40,9 @@ const buildPayloadSignature = (
 
 const syncProjects = async (payload: Awaited<ReturnType<typeof loadArcProjects>>) => {
   await prisma.$transaction(async (tx) => {
+    if (payload.projects.some((project) => project.slug === "sheltered_retreat_project" && project.stages.some((stage) => stage.sortOrder === 6))) {
+      await mergeOutpostProgress(tx);
+    }
     for (const projectData of payload.projects) {
       const project = await tx.project.upsert({
         where: { slug: projectData.slug },

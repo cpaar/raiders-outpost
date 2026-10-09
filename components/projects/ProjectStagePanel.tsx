@@ -8,6 +8,7 @@ import { getProgressStats } from "@/lib/progress";
 import { ProgressRing } from "@/components/ui/ProgressRing";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { ProjectObjective } from "@/components/projects/ProjectObjective";
+import { CollectionItemCosts } from "@/components/projects/CollectionItemCosts";
 
 type ProjectStagePanelProps = {
   stage: ProjectStageProgress;
@@ -96,6 +97,14 @@ function ProjectStagePanelComponent({
             data-testid={`project-stage-content-${stage.stageKey}`}
           >
             <div>
+              {!isStackedLayout ? (
+                <h3 className="mb-2 text-sm font-semibold uppercase tracking-[0.12em] text-text lg:hidden">{stage.name}</h3>
+              ) : null}
+              {stage.description ? (
+                <p className="mb-3 text-xs text-muted" data-testid="stage-description">
+                  {stage.description}
+                </p>
+              ) : null}
               {stage.prerequisite ? (
                 <p className="mb-3 border-l-2 border-accent/50 pl-2 text-xs text-muted" data-testid="stage-prerequisite">
                   {stage.prerequisite}
@@ -108,7 +117,12 @@ function ProjectStagePanelComponent({
               ) : null}
               {materials.length ? (
                 <div className={itemGridClassName}>
-                  {materials.map((item) => (
+                  {materials.map((item) => item.itemType === "Blueprint" || item.itemType === "Design" ? (
+                    <div key={item.itemId} className="w-full max-w-[120px] justify-self-center lg:justify-self-start [&>[data-item-id]]:rounded-b-none">
+                      <ProjectItemTile item={item} onAdjust={onAdjust} stripBlueprintLabel={stripBlueprintLabel} />
+                      <CollectionItemCosts item={item} />
+                    </div>
+                  ) : (
                     <ProjectItemTile
                       key={item.itemId}
                       item={item}

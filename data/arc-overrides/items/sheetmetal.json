@@ -4,7 +4,8 @@
   "rarity": "Common",
   "updatedAt": "10/08/2026",
   "name": {
-    "en": "SheetMetal"
+    "de": "Metallblech",
+    "en": "Sheet Metal"
   },
   "imageFilename": "sheetmetal.png"
 }

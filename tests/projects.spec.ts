@@ -93,28 +93,18 @@ test("project toggles persist per user", async ({ page }) => {
   await expect(page.getByTestId(`project-card-link-${slug}`)).toHaveCount(0);
 });
 
-test("current project is available with four stages and expired projects are hidden", async ({ page }) => {
-  await login(page, "MountainPilot");
+test("ongoing trophy project remains available and expired projects are hidden", async ({ page }) => {
+  await login(page, "CurrentProjectsPilot");
   await page.goto("/projects");
-  for (const slug of ["phantom_targets_project", "phantom_targets_part_2_project"]) {
+  for (const slug of ["phantom_targets_project", "phantom_targets_part_2_project", "ascending_the_mountain_project"]) {
     await expect(page.getByTestId(`project-card-${slug}`)).toHaveCount(0);
   }
-
-  const slug = "ascending_the_mountain_project";
+  const slug = "trophy_display_project";
   await expect(page.getByTestId(`project-card-${slug}`)).toBeVisible();
   await page.getByTestId(`project-card-link-${slug}`).click();
   await expect(page).toHaveURL(new RegExp(`/projects/${slug}`));
-  const stages = page.getByTestId("project-stage-columns");
-  await expect(stages.locator("[data-stage-key]")).toHaveCount(4);
-  await expect(stages.locator('[data-item-id="mechanical_components"]')).toHaveAttribute("data-required", "10");
-  await expect(stages.locator('[data-item-id="vaporizer_regulator"]')).toHaveAttribute("data-required", "3");
-
-  for (const itemId of ["mechanical_components", "rocket_thruster", "crash_mat", "vaporizer_regulator"]) {
-    const image = stages.locator(`[data-item-id="${itemId}"] img`);
-    await expect(image).toBeVisible();
-    await expect.poll(() => image.evaluate((element: HTMLImageElement) => element.naturalWidth)).toBeGreaterThan(0);
-  }
-  await page.getByRole("main").screenshot({ path: "test-results/ascending-the-mountain.png" });
+  await expect(page.getByTestId("project-stage-columns").locator("[data-stage-key]")).toHaveCount(5);
+  await page.getByRole("main").screenshot({ path: "test-results/current-trophy-project.png" });
 });
 
 test("mobile project layout uses vertical stage rail", async ({ browser }) => {

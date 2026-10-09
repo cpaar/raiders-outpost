@@ -1,0 +1,11 @@
+{
+  "id": "insulation_roll",
+  "type": "Recyclable",
+  "rarity": "Epic",
+  "updatedAt": "10/09/2026",
+  "name": {
+    "de": "Isolierrolle",
+    "en": "Insulation Roll"
+  },
+  "imageFilename": "insulation_roll_metaforge.png"
+}

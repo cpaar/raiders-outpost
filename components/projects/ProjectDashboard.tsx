@@ -127,38 +127,42 @@ export function ProjectDashboard({
     <div className="flex flex-col gap-4">
       {useMultiStageRailLayout ? (
         <div className="border border-frame2/70 bg-panel/70">
-          <div className="hidden border-b border-frame2/70 lg:block">
-            <ProjectStageStepper
-              stages={sortedStages.map((stage) => ({
-                stageKey: stage.stageKey,
-                name: stage.name,
-              }))}
-              completionStatus={stageCompletionStatus}
-              onToggleStageCompletion={handleToggleStageCompletion}
-              disableToggleStatus={stageToggleDisabledStatus}
-            />
-          </div>
-          <div className="hidden overflow-x-auto p-2.5 lg:block" data-testid="project-stage-columns">
-            <div
-              className="grid min-w-full gap-2"
-              style={{
-                gridTemplateColumns: `repeat(${Math.max(sortedStages.length, 1)}, minmax(220px, 1fr))`,
-              }}
-            >
-              {sortedStages.map((stage) => {
-                const progressItems = stageItemsByKey.get(stage.stageKey) ?? stage.items;
-                return (
-                  <ProjectStagePanel
-                    key={stage.stageKey}
-                    stage={stage}
-                    onAdjust={updateItemQuantity}
-                    stripBlueprintLabel={activeProject.kind === "blueprints"}
-                    progressItems={progressItems}
-                    layoutVariant="column"
-                    itemGridVariant="adaptiveColumns"
-                  />
-                );
-              })}
+          <div className="hidden overflow-x-auto lg:block">
+            <div style={{ minWidth: `${sortedStages.length * 228 + 20}px` }}>
+              <div className="border-b border-frame2/70">
+                <ProjectStageStepper
+                  stages={sortedStages.map((stage) => ({
+                    stageKey: stage.stageKey,
+                    name: stage.name,
+                  }))}
+                  completionStatus={stageCompletionStatus}
+                  onToggleStageCompletion={handleToggleStageCompletion}
+                  disableToggleStatus={stageToggleDisabledStatus}
+                />
+              </div>
+              <div className="p-2.5" data-testid="project-stage-columns">
+                <div
+                  className="grid min-w-full gap-2"
+                  style={{
+                    gridTemplateColumns: `repeat(${Math.max(sortedStages.length, 1)}, minmax(220px, 1fr))`,
+                  }}
+                >
+                  {sortedStages.map((stage) => {
+                    const progressItems = stageItemsByKey.get(stage.stageKey) ?? stage.items;
+                    return (
+                      <ProjectStagePanel
+                        key={stage.stageKey}
+                        stage={stage}
+                        onAdjust={updateItemQuantity}
+                        stripBlueprintLabel={activeProject.kind === "blueprints"}
+                        progressItems={progressItems}
+                        layoutVariant="column"
+                        itemGridVariant="adaptiveColumns"
+                      />
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
           <div className="relative lg:hidden" data-testid="project-stage-vertical-layout">

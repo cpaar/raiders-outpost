@@ -1,0 +1,11 @@
+{
+  "id": "steel_cable",
+  "type": "Recyclable",
+  "rarity": "Rare",
+  "updatedAt": "10/09/2026",
+  "name": {
+    "de": "Stahlseil",
+    "en": "Steel Cable"
+  },
+  "imageFilename": "steel_cable_metaforge.png"
+}

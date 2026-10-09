@@ -1,3 +1,5 @@
+import type { CollectionItemCosts } from "@/types/collection-costs";
+
 export type ProjectItemProgress = {
   projectItemId: string;
   projectSlug: string;
@@ -9,6 +11,7 @@ export type ProjectItemProgress = {
   imageFile: string | null;
   rarity: string;
   itemType: string;
+  costs?: CollectionItemCosts;
 };
 
 export type ProjectStageProgress = {
@@ -17,6 +20,7 @@ export type ProjectStageProgress = {
   sortOrder: number;
   items: ProjectItemProgress[];
   prerequisite?: string;
+  description?: string;
 };
 
 export type ProjectProgress = {

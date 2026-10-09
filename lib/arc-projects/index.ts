@@ -8,6 +8,8 @@ import {
 import { stripBlueprintLabel, stripFurnitureDesignLabel } from "@/lib/item-labels";
 import type { AppLocale } from "@/lib/locale";
 import { COLLECTIONS } from "@/lib/collections";
+import { getCollectionItemCosts } from "@/lib/collection-costs";
+import type { CollectionItemCosts } from "@/types/collection-costs";
 import {
   getOverridePath,
   listOverrideDir,
@@ -20,6 +22,7 @@ export type ArcProjectItem = {
   displayName: string;
   quantityRequired: number;
   kind?: "objective";
+  costs?: CollectionItemCosts;
 };
 
 export type ArcProjectStage = {
@@ -28,6 +31,7 @@ export type ArcProjectStage = {
   sortOrder: number;
   items: ArcProjectItem[];
   prerequisite?: string;
+  description?: string;
 };
 
 export type ArcProject = {
@@ -66,6 +70,7 @@ type ArcProjectSource = {
   name?: Record<string, string>;
   phases?: {
     name?: Record<string, string>;
+    description?: Record<string, string>;
     phase?: number;
     requirementItemIds?: { itemId: string; quantity: number }[];
     objectives?: { id: string; name: Record<string, string> }[];
@@ -78,6 +83,8 @@ type ArcHideoutSource = {
   maxLevel?: number;
   levels?: {
     level?: number;
+    name?: Record<string, string>;
+    description?: Record<string, string>;
     requirementItemIds?: { itemId: string; quantity: number }[];
     requires?: { outpostRooms?: number }[];
   }[];
@@ -101,6 +108,7 @@ const buildCollections = async (
   locale: AppLocale
 ): Promise<ArcProject[]> => {
   const items = await loadArcItems(locale);
+  const materialItems = new Map(items.items.map((item) => [item.id ?? "", item]));
   return COLLECTIONS.map((collection) => {
     const entries = items.items
       .filter((item) => item.itemType === collection.itemType)
@@ -111,6 +119,9 @@ const buildCollections = async (
           ? stripFurnitureDesignLabel(item.name)
           : item.name,
         quantityRequired: 1,
+        costs: collection.itemType !== "Stencil" && item.id
+          ? getCollectionItemCosts(item.id, materialItems)
+          : undefined,
       }))
       .sort((a, b) =>
         stripBlueprintLabel(a.displayName).localeCompare(
@@ -158,7 +169,8 @@ const mapHideoutProject = (
       const sortOrder = Number(level.level ?? 0);
       return {
         stageKey: `level-${sortOrder || 0}`,
-        name: resolveHideoutStageName(locale, sortOrder || 0),
+        name: resolveName(level.name, locale, resolveHideoutStageName(locale, sortOrder || 0)),
+        description: level.description ? resolveName(level.description, locale, "") : undefined,
         sortOrder,
         prerequisite: level.requires?.map((requirement) =>
           requirement.outpostRooms
@@ -200,6 +212,7 @@ const mapProject = (
       const sortOrder = Number(phase.phase ?? 0);
       return {
         stageKey: `phase-${sortOrder || 0}`,
+        description: phase.description ? resolveName(phase.description, locale, "") : undefined,
         name:
           resolveName(
             phase.name,
@@ -295,7 +308,7 @@ const readArcProjects = (locale: AppLocale) =>
       projects: [...projects, ...await buildCollections(locale)],
     };
     },
-    ["arc-projects-v11", locale],
+    ["arc-projects-v16", locale],
     { revalidate: 3600 }
   );
 

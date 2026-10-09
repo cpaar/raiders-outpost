@@ -232,6 +232,7 @@ export const getProjectProgress = async (
               itemId: item.itemId,
               displayName: item.displayName,
               quantityRequired: item.quantityRequired,
+              costs: item.costs,
               quantityOwned: ownedByItemId.get(projectItemId) ?? 0,
               imageFile: meta.imageFile ?? null,
               rarity: meta.rarity,
